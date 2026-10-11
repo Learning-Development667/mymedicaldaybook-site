@@ -3,7 +3,8 @@
   'use strict';
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* The opening film: plays once over its poster, then rests on its last frame.
+  /* The opening film: plays over its poster, starts again when it ends, pauses when
+     scrolled out of view and carries on from the same place when it comes back.
      With motion reduced, or where autoplay is refused, the poster stays. */
   var film = document.querySelector('.hero .film');
   var video = film && film.querySelector('video');
@@ -13,11 +14,17 @@
     var webm = video.getAttribute('data-webm');
     if (webm && video.canPlayType('video/webm') && !wide) { var s1 = document.createElement('source'); s1.src = webm; s1.type = 'video/webm'; video.appendChild(s1); }
     var s2 = document.createElement('source'); s2.src = src; s2.type = 'video/mp4'; video.appendChild(s2);
+    video.loop = true;
     video.addEventListener('playing', function () { film.classList.add('playing'); }, { once: true });
-    video.addEventListener('ended', function () { video.pause(); });
+    var tryPlay = function () { var p = video.play(); if (p && p.catch) { p.catch(function () { /* autoplay refused: the poster stays */ }); } };
     video.load();
-    var p = video.play();
-    if (p && p.catch) { p.catch(function () { /* autoplay refused: the poster stays */ }); }
+    tryPlay();
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { tryPlay(); } else { video.pause(); } });
+      }, { threshold: 0.25 }).observe(film);
+    }
+    document.addEventListener('visibilitychange', function () { if (document.hidden) { video.pause(); } else { tryPlay(); } });
   }
 
   /* Slow zooms on the stills, started as each comes into view. */

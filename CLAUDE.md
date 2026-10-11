@@ -12,14 +12,17 @@ The public site for My Medical Daybook at mymedicaldaybook.co.uk (GitHub Pages f
 - Quotes go live only in the person's own approved words. Nothing made up.
 
 ## Files
-- `index.html`: the home page, one scroll: the opening film, the gap, two of us one list, the report (with the real demo report pages), your circle, private by design, the close, the footer.
+- `index.html`: the home page, one scroll: the opening film, the gap, two of us one list, the report (with the real demo report pages), your circle (Hayley's and Keith's words, in their own words), private by design, the close, the footer.
+- `beta.html`: Join the Beta, where every Join the Beta button leads: what the Beta is, the promise (free throughout the Beta; Beta circles keep the full app free for a year after the App Store, with everything logged; Mark's decision of 11 October 2026), the Beta code (by invitation, one code per route in, from whoever told them), the three steps (create the account, Add to Home Screen, log the first day), how to give feedback (the Tell Mark button on Today, support@, the phone number inside the app only), the demo.
 - `privacy.html`, `terms.html`: the app's own privacy and terms text, copied from `Mark_Medical/index.html` templates (`tpl-privacy`, `tpl-terms`) with `h3` made `h2` and the contact span filled. When the app's text changes, copy it again.
 - `support.html`: how to get help, install steps, common questions, how to delete records.
-- `css/site.css`, `js/site.js` (the film plays once over its poster then rests; the stills get a slow zoom when scrolled into view; both off under reduced motion).
+- `css/site.css`, `js/site.js` (the film plays over its poster, starts again when it ends, pauses when scrolled out of view and carries on when scrolled back; the stills get a slow zoom when scrolled into view; all off under reduced motion).
 - `media/`: the walk film (1280 mp4 and webm, 1920 mp4, posters) and the five stills at 800 and 1600 (jpg and webp); `icons/`: the Daybook mark at the sizes the site needs, plus the plain and one-colour SVGs.
 - The masters live in Mark's Branding folder and in the app repository's ignored `reports/brand` folder.
 
 ## Still to do
+- Pictures for the three Beta steps: Mark's iPhone screenshots of the Share sheet and Add to Home Screen, and the sign-up screen once it has the Beta code box.
+- The Beta code box and the Tell Mark button are promised on `beta.html` and still to build in the app; keep the page and the app in step.
 - Charlene's and Shelley's quotes, once given and approved.
 - Point `mymedicaldaybook.co.uk` at this site (CNAME file here, DNS at Cloudflare) and change every app link to `app.mymedicaldaybook.co.uk` once the app has moved.
 - The App Store and Google Play badges when the app is listed, with Apple's credit line in the footer.
