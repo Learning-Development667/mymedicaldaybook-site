@@ -1,0 +1,23 @@
+My Medical Daybook (Daybook)
+Copyright (c) 2026 Mark 1 Apps Ltd. All rights reserved.
+Mark 1 Apps Ltd is a company registered in England and Wales (company number
+17510025). Daybook was created by Mark Brown and assigned to the company by
+deed dated 10 October 2026.
+
+This source code is published so that it can be read: anyone may look at it to
+see how Daybook works and what it does with their data. That is the only
+permission given.
+
+You may not copy, modify, distribute, host, sell, or build on this code, in
+whole or in part, or use the My Medical Daybook name (Daybook for short), the
+strapline, artwork or the Mark 1 Apps mark, without written permission from
+the copyright holder.
+
+Third-party components keep their own licences: the McCance and Widdowson
+food table (data/cofid.json) is Crown copyright under the Open Government
+Licence v3.0; Chart.js, pdf.js, mammoth.js, jsPDF and html2canvas are loaded
+from their own CDNs under their own licences; the fonts Fraunces and Inter
+are under the SIL Open Font Licence.
+
+No warranty. Daybook is a personal record-keeping tool and is not medical
+advice.
