@@ -96,7 +96,7 @@ p { margin: 0; }
 @media (max-width: 860px) { .top nav a.navlink { display: none; } }
 
 /* the opening: the app's own opener, the watercolour clip with the name over the sky */
-.hero { position: relative; min-height: min(88vh, 860px); display: grid; grid-template-rows: 1fr auto; overflow: hidden; background: var(--paper); color: var(--paper-ink); isolation: isolate; }
+.hero { position: relative; min-height: min(calc(100vh - 120px), 860px); min-height: min(calc(100svh - 120px), 860px); display: grid; grid-template-rows: 1fr auto auto; overflow: hidden; background: var(--paper); color: var(--paper-ink); isolation: isolate; }
 .hero .film { position: absolute; inset: 0; z-index: 0; }
 .hero .film video, .hero .film img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 34% 50%; }
 .hero .film video { opacity: 0; transition: opacity .6s ease; }
@@ -110,9 +110,31 @@ p { margin: 0; }
 .hero-top .ctas { justify-content: center; margin-top: 26px; }
 .hero-top .btn-ghost { border-color: var(--paper-teal); color: var(--paper-teal); background: color-mix(in srgb, var(--paper) 72%, transparent); }
 .hero-top .btn-ghost:hover { background: #DDEEEF; color: #135A60; }
-.hero-foot { position: relative; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 26px; padding: 0 var(--gutter) clamp(22px, 4vh, 40px); color: rgba(255, 255, 255, .9); font-size: 15px; text-align: center; }
+.hero-foot { position: relative; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 26px; padding: 0 var(--gutter) clamp(14px, 2.5vh, 22px); color: rgba(255, 255, 255, .9); font-size: 15px; text-align: center; }
 .hero-foot .co { display: inline-flex; align-items: center; gap: 10px; padding: 6px 14px 6px 8px; border-radius: 999px; background: var(--paper); color: var(--paper-ink); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
 .hero-foot .co img { height: 28px; width: auto; }
+/* The band along the foot of the picture (Mark's choice, frosted glass): says there is more below and takes you there.
+   The arrow sits centred under the words, bobbing and fading slowly (about once every two seconds, far below the
+   three-a-second flash limit), and a soft sweep of light crosses the glass every few seconds. All off under reduced
+   motion. */
+.hero-band { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; min-height: 64px; padding: 10px var(--gutter) 6px; overflow: hidden; font-size: 17px; font-weight: 600; letter-spacing: .01em; text-decoration: none; text-align: center; color: #fff; background: rgba(255, 255, 255, .13); border-top: 1px solid rgba(255, 255, 255, .3); -webkit-backdrop-filter: blur(12px) saturate(1.2); backdrop-filter: blur(12px) saturate(1.2); text-shadow: 0 1px 8px rgba(0, 0, 0, .45); --sweep: rgba(255, 255, 255, .5); }
+.hero-band svg { flex: none; width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; margin-top: 2px; animation: bandBob 2s ease-in-out infinite; }
+.hero-band::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(105deg, transparent 35%, var(--sweep) 50%, transparent 65%); background-size: 260% 100%; background-repeat: no-repeat; background-position: 130% 0; animation: bandSweep 5.5s ease-in-out 1.6s infinite; }
+.hero-band:hover span { text-decoration: underline; text-underline-offset: 3px; }
+@keyframes bandBob { 0%, 100% { transform: translateY(-2px); opacity: 1; } 50% { transform: translateY(4px); opacity: .35; } }
+@keyframes bandSweep { 0% { background-position: 130% 0; } 30%, 100% { background-position: -30% 0; } }
+@media (prefers-reduced-motion: reduce) { .hero-band svg, .hero-band::after { animation: none; } .hero-band::after { display: none; } }
+.hero-band .short { display: none; }
+@media (max-width: 560px) { .hero-band .long { display: none; } .hero-band .short { display: inline; } }
+/* A short screen: the title block gives up height so the band stays on the first screen. */
+@media (max-height: 800px) {
+  .hero-top { margin-top: clamp(8px, 3vh, 40px); padding-top: clamp(12px, 2.5vh, 28px); padding-bottom: clamp(12px, 2.5vh, 28px); }
+  .hero-brand { font-size: clamp(56px, min(14vw, 13vh), 120px); }
+  .hero-strap { margin-top: 8px; }
+  .hero-pill { margin-top: 10px; }
+  .hero-top .ctas { margin-top: 16px; }
+  .hero-foot { padding-bottom: 14px; }
+}
 .hero-in { animation: heroIn 1.4s cubic-bezier(.2, .7, .2, 1) .3s both; }
 @keyframes heroIn { from { opacity: 0; filter: blur(7px); transform: translateY(8px); } to { opacity: 1; filter: blur(0); transform: none; } }
 @media (prefers-reduced-motion: reduce) { .hero-in { animation: none; } }
