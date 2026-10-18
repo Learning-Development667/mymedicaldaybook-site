@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var APP = 'https://learning-development667.github.io/Mark_Medical/';
+  var APP = 'https://app.mymedicaldaybook.co.uk/';
   var BRIDGE = 'https://care-log-bridge.markbrown667.workers.dev';
   var $ = function (s, el) { return (el || document).querySelector(s); };
   var $$ = function (s, el) { return Array.prototype.slice.call((el || document).querySelectorAll(s)); };
