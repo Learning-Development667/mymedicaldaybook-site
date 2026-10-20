@@ -260,6 +260,10 @@ a.trycard:hover h3 { color: var(--teal); }
 .codego { display: grid; gap: 16px; padding-top: 6px; border-top: 1px solid var(--line); }
 .codego[hidden] { display: none; }
 .codego .okline { display: flex; gap: 10px; align-items: flex-start; color: var(--green); font-weight: 600; }
+.codego .forpick { display: grid; gap: 10px; }
+.codego .forq { margin: 0; font: 600 20px var(--head); color: var(--ink); }
+.codego .forpick .btn { width: 100%; justify-content: center; }
+.codego .forpick p.small { margin: 0; }
 .codego .okline svg { width: 24px; height: 24px; flex: none; margin-top: 2px; }
 .codego ol { margin: 0; padding-left: 0; list-style: none; display: grid; gap: 12px; counter-reset: s; }
 .codego ol li { position: relative; padding-left: 44px; font-size: 17px; color: var(--slate); }

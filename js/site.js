@@ -157,7 +157,7 @@
      to create an account appear, with the code filled in. Nothing is sent anywhere but the bridge, and only the code. */
   var box = $('#beta-code');
   if (box) {
-    var checkBtn = $('#beta-check'), msg = $('#beta-msg'), go = $('#beta-go'), okline = $('#beta-ok'), link = $('#beta-link');
+    var checkBtn = $('#beta-check'), msg = $('#beta-msg'), go = $('#beta-go'), okline = $('#beta-ok'), picks = $$('#beta-go [data-for]');
     var tidy = function (v) { return String(v || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 24); };
     var say = function (text, bad) { msg.textContent = text; msg.classList.toggle('is-bad', !!bad); };
     var check = function () {
@@ -172,9 +172,10 @@
         if (d && d.valid) {
           say('');
           okline.textContent = d.label ? 'Your code from ' + d.label + ' is good.' : 'Your code is good.';
-          link.href = APP + '?beta=' + encodeURIComponent(code);
+          /* what Daybook is for, chosen here: the app saves it and its set-up does not ask again */
+          picks.forEach(function (a) { a.href = APP + '?beta=' + encodeURIComponent(code) + '&for=' + a.getAttribute('data-for'); });
           go.hidden = false;
-          link.focus({ preventScroll: true });
+          if (picks[0]) picks[0].focus({ preventScroll: true });
           go.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'nearest' });
         } else {
           say((d && d.message) || 'That code is not one we know. Check it with whoever gave it to you.', true);

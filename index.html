@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="css/site.css?v=5">
+  <link rel="stylesheet" href="css/site.css?v=6">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mymedicaldaybook.co.uk/#website","url":"https://mymedicaldaybook.co.uk/","name":"My Medical Daybook","alternateName":"Daybook","description":"Your companion between appointments.","inLanguage":"en-GB"},{"@type":"Organization","@id":"https://mymedicaldaybook.co.uk/#org","name":"Mark 1 Apps Ltd","url":"https://mymedicaldaybook.co.uk/","logo":"https://mymedicaldaybook.co.uk/icons/icon-512.png"}]}</script>
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -347,11 +347,16 @@
           <p class="codemsg" id="beta-msg" role="status" aria-live="polite"></p>
           <div class="codego" id="beta-go" hidden>
             <p class="okline" id="beta-ok"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg><span>Your code is good.</span></p>
-            <a class="btn" id="beta-link" href="https://app.mymedicaldaybook.co.uk/">Create your account in Daybook</a>
+            <div class="forpick" role="group" aria-labelledby="beta-for-q">
+              <p class="forq" id="beta-for-q">What will you use Daybook for?</p>
+              <a class="btn" data-for="cancer" href="https://app.mymedicaldaybook.co.uk/">Cancer treatment</a>
+              <a class="btn" data-for="ibd" href="https://app.mymedicaldaybook.co.uk/">Crohn's or colitis</a>
+              <p class="small muted">Menopause is coming later. Either can be changed in Daybook's Settings afterwards.</p>
+            </div>
             <ol>
-              <li><b>Create an account.</b> The code is filled in for you. It asks for your first name, whether Daybook is for you or someone you care for, an email address and a password.</li>
+              <li><b>Create an account.</b> Your code and your choice are filled in for you. It asks for your first name, whether Daybook is for you or someone you care for, an email address and a password.</li>
               <li><b>Add it to your Home Screen,</b> so it opens like an app and can send reminders. iPhone or iPad: in Safari, tap the Share button <svg class="ico" viewBox="0 0 24 24" aria-label="the square with an arrow pointing up" role="img"><path d="M12 3v12M8 7l4-4 4 4M5 11v9h14v-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> at the bottom, then <b>Add to Home Screen</b>. Android: in Chrome, the three dots, then <b>Add to Home screen</b>. Mac: in Safari, File, then <b>Add to Dock</b>.</li>
-              <li><b>Let the set-up walk you through it:</b> what Daybook is for, your name on the reports, who to contact, and Tap to speak. Five minutes, then log the first day.</li>
+              <li><b>Let the set-up walk you through the rest:</b> your name on the reports, who to contact, and Tap to speak. Five minutes, then log the first day.</li>
             </ol>
           </div>
         </div>
@@ -422,6 +427,6 @@
     </div>
   </footer>
 
-  <script src="js/site.js?v=8" defer></script>
+  <script src="js/site.js?v=9" defer></script>
 </body>
 </html>
