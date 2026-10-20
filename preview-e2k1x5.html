@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Daybook website preview</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="A private daybook for anyone with a condition and a care team. The days between appointments, logged as they happen, turned into a report your nurse or doctor can read in a minute. Free in Beta.">
+  <meta name="theme-color" content="#F6F4EF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1B24" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="My Medical Daybook">
+  <meta property="og:description" content="Your companion between appointments. The readings, notes and questions from every day in between, turned into pages your nurse or doctor can read in a minute.">
+  <meta property="og:image" content="https://mymedicaldaybook.co.uk/media/opener-poster.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Medical Daybook">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="icons/favicon-64.png" sizes="64x64" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/site.css?v=8">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the main content</a>
+  <div class="pv-note" role="note"><div class="wrap"><p><b>Preview for Shelley and Helen.</b> This is not live yet. The new parts are <a href="#why">Why Daybook exists</a>, <a href="#h-list">How it started</a> and <a href="#h-shelley">Shelley</a>. Helen's space is in How it started.</p></div></div>
+  <style>
+  .pv-note { background: var(--teal-light); color: var(--ink); border-bottom: 1px solid var(--line); padding-block: 12px; font-size: 16px; }
+  .pv-note .wrap { display: block; }
+  .pv-note p { margin: 0; }
+  .pv-note a { color: var(--teal); font-weight: 600; }
+  </style>
+
+  <header class="top">
+    <div class="wrap">
+      <a class="lockup" href="#top">
+        <img src="icons/icon-192.png" alt="" width="44" height="44">
+        <span><span class="pre">My Medical</span><span class="name">Daybook</span><span class="sr-only">, home</span></span>
+      </a>
+      <nav aria-label="Site">
+        <a class="navlink" href="#does">What it does</a>
+        <a class="navlink" href="#guide">See it work</a>
+        <a class="navlink" href="#reports">The reports</a>
+        <a class="navlink" href="#try">Try it</a>
+        <a class="btn" href="#beta">Join the Beta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 1. The opening: the app's own first screen -->
+    <section class="hero" id="top" aria-labelledby="h-open">
+      <div class="film">
+        <img src="media/opener-poster.jpg" alt="" width="1280" height="720" fetchpriority="high">
+        <video muted playsinline preload="auto" poster="media/opener-poster.jpg" aria-hidden="true" tabindex="-1">
+          <source src="media/opener.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-top hero-in">
+        <h1 id="h-open"><span class="hero-pre">My Medical</span><span class="hero-brand">Daybook</span></h1>
+        <p class="hero-strap">Your companion between appointments.</p>
+        <span class="hero-pill">Free in Beta</span>
+        <div class="ctas">
+          <a class="btn" href="#try">Try the demo</a>
+          <a class="btn-ghost" href="#beta">Join the Beta</a>
+        </div>
+      </div>
+      <p class="hero-foot">Works on iPhone, iPad, Mac and Android. Coming to the App Store and Google Play.</p>
+      <a class="hero-band" href="#why"><span class="long">Scroll down to see everything Daybook does</span><span class="short">Scroll down for more</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+    </section>
+
+    <!-- 2. Why it exists -->
+    <section class="sec solid" id="why" aria-labelledby="h-gap">
+      <div class="wrap grid2">
+        <figure class="reveal">
+          <div class="pic parallax">
+            <picture>
+              <source type="image/webp" srcset="media/night-800.webp 800w, media/night-1600.webp 1600w" sizes="(min-width: 900px) 560px, 100vw">
+              <img src="media/night-1600.jpg" srcset="media/night-800.jpg 800w, media/night-1600.jpg 1600w" sizes="(min-width: 900px) 560px, 100vw" alt="A bedside table at night with a lamp, a glass of water, reading glasses, a phone and an open notebook with a pen." width="1600" height="873" loading="lazy">
+            </picture>
+          </div>
+        </figure>
+        <div class="text reveal d1">
+          <p class="kicker">Why Daybook exists</p>
+          <h2 id="h-gap">The questions come when they come. By the appointment, they've gone.</h2>
+          <p>In August 2026 I was told I had stage 4 pancreatic cancer, already in my liver and my spine. I was 44. I was given 6 to 12 months, depending on how I responded to treatment.</p>
+          <p>After that, everything became a blur. News like that takes your memory with it.</p>
+          <p>Then came the everyday part. Tablets at different times. Temperatures. Side effects. What I'd managed to eat. And the questions, which arrived whenever they liked: in the car, over dinner, lying awake.</p>
+          <p>Some went on scraps of paper. Most went nowhere. I'd forget to tell Shelley what I wanted to ask. By the time I sat down in front of the oncologist, I had very little to say and no idea where to start.</p>
+          <p class="by">Mark Brown<span>, creator of Daybook</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. How it started, one problem at a time, and Shelley -->
+    <section class="sec" aria-labelledby="h-list">
+      <div class="wrap grid2 flip story">
+        <figure class="reveal">
+          <div class="pic parallax">
+            <picture>
+              <source type="image/webp" srcset="media/table-800.webp 800w, media/table-1600.webp 1600w" sizes="(min-width: 900px) 560px, 100vw">
+              <img src="media/table-1600.jpg" srcset="media/table-800.jpg 800w, media/table-1600.jpg 1600w" sizes="(min-width: 900px) 560px, 100vw" alt="Two people's hands rest together on an open notebook at a kitchen table, beside two mugs of tea." width="1600" height="873" loading="lazy">
+            </picture>
+          </div>
+        </figure>
+        <div class="text reveal d1">
+          <p class="kicker">How it started</p>
+          <h2 id="h-list">The worst news of our lives. So we made something with it.</h2>
+          <p class="lead">Daybook wasn't planned. It grew one problem at a time.</p>
+          <ol class="grew">
+            <li><h3>Medicines</h3><p>It started as a way to track my tablets. I still forgot them, so I added Shelley. Her phone gets my reminders too, so she can tell me to take them, or fetch them for me.</p></li>
+            <li><h3>Pain</h3><p>Then new pains started. I wanted to ask the nurses and doctors what was causing them, but I'd forget, so I logged them as they happened.</p></li>
+            <li><h3>Questions</h3><p>Then we realised Shelley could add her own questions, the ones that came out of our conversations. I've always been dreadful at admin. Shelley has always been the best administrator I know; even our friends ask her to sort theirs. That's when I could see the beginning of Daybook.</p></li>
+            <li><h3>Food</h3><p>I had to put on weight before treatment, and Shelley kept asking what I'd eaten. A food diary made it easy to answer.</p></li>
+            <li><h3>Check-ins</h3><p>As treatment went on, I met new people, like the pain consultant. Morning and evening check-ins gave us a proper way to talk about my pain.</p></li>
+            <li><h3>Mood</h3><p>I started therapy, so I began tracking my mood and wellbeing. I'm good at telling myself I'm fine when I'm not, so Shelley can score how she thinks I am too.</p></li>
+            <li><h3>Reports</h3><p>With all of that in one place, it made sense to summarise it. Before each appointment I send it to my nurses and doctors, or print it and take it in: my readings, my week and, most importantly, every question we'd collected.</p></li>
+          </ol>
+          <p>Then friends with Crohn's asked for it, and it grew again.</p>
+          <!-- PREVIEW ONLY: remove before going live unless her own approved words have arrived. Nothing made up goes on this page. -->
+          <blockquote class="quote placeholder preview-only">
+            <p>Helen, this space is for your own words: what you thought when you first saw Daybook, why you asked whether it could work for Crohn's, and how you kept track of things and your questions for the team before.</p>
+            <p class="by">Helen<span>, shown however you would like</span></p>
+          </blockquote>
+          <p>Daybook doesn't give medical advice, and never will. It's a personal medical journal: what happened, in our own words, kept for the people who need to see it.</p>
+        </div>
+      </div>
+      <div class="wrap grid2 shelley">
+        <figure class="reveal">
+          <div class="pic film-walk">
+            <img src="media/walk-poster-1280.jpg" srcset="media/walk-poster-1280.jpg 1280w, media/walk-poster-1920.jpg 1920w" sizes="(min-width: 900px) 560px, 100vw" alt="A couple in their late fifties walk arm in arm along a frosty farm track towards a lone oak tree at sunrise." width="1280" height="720" loading="lazy">
+            <video class="walk" muted playsinline preload="none" aria-hidden="true" tabindex="-1" data-src-1280="media/walk-1280.mp4" data-src-1920="media/walk-1920.mp4" data-webm="media/walk-1280.webm"></video>
+          </div>
+        </figure>
+        <div class="text reveal d1">
+          <p class="kicker">Shelley</p>
+          <h2 id="h-shelley">None of this works without her.</h2>
+          <p>I have the ideas. Shelley is my sounding board, and the dedicated grown-up who gets me thinking.</p>
+          <p>We've been married 22 years. This news hit her as hard as it hit me. We were supposed to grow old together.</p>
+          <p>Daybook is the good thing we made out of the worst news, and we made it together.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. What it does, between appointments -->
+    <section class="sec solid" id="does" aria-labelledby="h-does">
+      <div class="wrap">
+        <div class="sec-head centre reveal">
+          <p class="kicker">Between appointments</p>
+          <h2 id="h-does">The weeks in between are where it all happens. Daybook is built for them.</h2>
+          <p class="lead">A minute in the morning, a minute at night, a few taps through the day. By the next appointment, the whole story is there.</p>
+        </div>
+        <div class="features">
+          <article class="feat reveal">
+            <div class="shot"><img src="guide/checkin-2.webp" alt="The morning check-in: one question on the screen, a slider from 1 to 10, and Back, Skip and Next underneath." width="780" height="1688" loading="lazy"></div>
+            <h3>Two check-ins a day</h3>
+            <p>A minute each, morning and evening: sleep, symptoms, pain and mood, one question a screen. Say it instead of typing it with Tap to speak.</p>
+          </article>
+          <article class="feat reveal d1">
+            <div class="shot"><img src="guide/reading-1.webp" alt="Today in Daybook: the day's check-ins, then nine tiles, Vitals, Pain, Drink, Food, Note, Sleep, Bowels, Symptom and Medicine." width="780" height="1688" loading="lazy"></div>
+            <h3>Log anything in a few taps</h3>
+            <p>Vitals, pain, a drink, a meal, a note, sleep, bowels, a symptom, a dose: nine tiles on Today, each a few taps, with the time filled in for you.</p>
+          </article>
+          <article class="feat reveal d2">
+            <div class="shot"><img src="guide/meds-1.webp" alt="The Meds tab: each medicine as a card with its name, how many doses are done today, and a Log now button." width="780" height="1688" loading="lazy"></div>
+            <h3>Medicines and reminders</h3>
+            <p>Every medicine with its dose and how many are done today. Log now is one tap. Reminders arrive as notifications at the times you set, with the names kept off the lock screen if you like.</p>
+          </article>
+          <article class="feat reveal">
+            <div class="shot"><img src="guide/question-2.webp" alt="A question for the team being typed, with chips for who it is for: Oncology, Gastro, General, Not sure, Dietitian, Wellbeing, Pain team." width="780" height="1688" loading="lazy"></div>
+            <h3>Questions that wait for the appointment</h3>
+            <p>Write it when it comes to you, say who it is for, and it heads that team's report with room under it for the answer. Record the answer in clinic so nobody has to take notes.</p>
+          </article>
+          <article class="feat reveal d1">
+            <div class="shot"><img src="guide/week-2.webp" alt="Your week: a question with four word answers to tap, Not at all, A little, Quite a bit, A lot." width="780" height="1688" loading="lazy"></div>
+            <h3>Your week, in your own words</h3>
+            <p>Five minutes once a week, ending on the day you choose, your treatment day if you like: what helped, what was hardest, the week in a sentence. The mood and wellbeing report is built from it.</p>
+          </article>
+          <article class="feat reveal d2">
+            <div class="shot"><img src="guide/contacts-3.webp" alt="Who to contact on More: a nurse's card with her role, number and email, and Call and Email buttons." width="780" height="1688" loading="lazy"></div>
+            <h3>Who to contact, one tap</h3>
+            <p>The ward, the nurse, the GP, the advice line: a name, a number, an email. Call or email in one tap, and send any report to any of them from the app.</p>
+          </article>
+        </div>
+        <div class="also reveal">
+          <div class="it">
+            <svg viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="6" width="12" height="20" rx="6"/><path d="M10 20a12 12 0 0 0 24 0M22 32v6M16 38h12"/></svg>
+            <div><b>Talk instead of type</b><p>Every box has a Tap to speak button under it. Tap, say it, tap again. The words appear and can be changed like typed text. Keyboards are hard on a bad day.</p></div>
+          </div>
+          <div class="it">
+            <svg viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6h14l8 8v24H12z"/><path d="M26 6v8h8M17 22h10M17 28h10M17 34h6"/></svg>
+            <div><b>Letters explained</b><p>Photograph a clinic letter, a label or a plan and Daybook Assistant explains it in plain English, only when you ask, with the questions worth taking back to the team.</p></div>
+          </div>
+          <div class="it">
+            <svg viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 24h8l4-10 6 20 4-14 3 4h7"/></svg>
+            <div><b>Apple Health, if you want it</b><p>Steps, sleep, workouts, weight and your food app's totals can arrive by themselves. Everything can be typed in instead, so Daybook works in full without it.</p></div>
+          </div>
+          <div class="it">
+            <svg viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6c-7 8-11 13-11 19a11 11 0 0 0 22 0c0-6-4-11-11-19z"/><path d="M17 27a5 5 0 0 0 5 5"/></svg>
+            <div><b>Crohn's or colitis</b><p>Bowels with blood and urgency, a flare plan in the team's own words, "I think I'm flaring" with a 7-day summary to read out, results as the lab gave them, injections and steroid courses on the calendar.</p></div>
+          </div>
+          <div class="it">
+            <svg viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="10" width="30" height="27" rx="4"/><path d="M7 18h30M15 6v8M29 6v8"/><circle cx="22" cy="28" r="3"/></svg>
+            <div><b>Cancer treatment</b><p>Cycles as the team counts them, sessions marked done, side effects asked in the check-ins for three days after each one, and the alert card's limits on every temperature.</p></div>
+          </div>
+          <div class="it">
+            <svg viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="6"/><circle cx="30" cy="18" r="5"/><path d="M5 36a11 11 0 0 1 22 0M24 36a9 9 0 0 1 15-6"/></svg>
+            <div><b>Your care circle</b><p>Invite the people who help. They see what you see, from their own phone. A carer adds their own view of the day and the week, kept apart from yours, never mixed in.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. See it work -->
+    <section class="sec" id="guide" aria-labelledby="h-guide">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="kicker">See it work</p>
+          <h2 id="h-guide">The real screens, step by step.</h2>
+          <p class="lead">These are the app's own screens, with made-up data, played as they happen. Start with the whole story: a day's logging, a question, then the report made and sent.</p>
+        </div>
+        <div class="guide reveal d1">
+          <div class="gphone" id="g-phone" role="img" aria-label="Daybook on a phone, playing the chosen walk-through">
+            <img id="g-img" src="guide/story-1.webp" alt="" width="780" height="1688">
+            <span class="gring" id="g-ring" hidden></span>
+          </div>
+          <div class="gwords">
+            <div class="chips" id="g-chips" role="group" aria-label="Walk-throughs"><span class="muted">Loading the walk-throughs</span></div>
+            <p class="gstep" id="g-step" aria-live="polite">Step 1</p>
+            <p class="gcap" id="g-cap">Loading the walk-through.</p>
+            <div class="gctl">
+              <button class="btn-ghost arrow" type="button" id="g-prev" aria-label="Previous step">&#8249;</button>
+              <button class="btn-ghost play" type="button" id="g-play" aria-pressed="false">Play</button>
+              <button class="btn-ghost arrow" type="button" id="g-next" aria-label="Next step">&#8250;</button>
+            </div>
+            <p class="gintro" id="g-intro"></p>
+            <ol class="glist" id="g-list" aria-label="The steps in words"></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. The reports -->
+    <section class="sec solid" id="reports" aria-labelledby="h-report">
+      <div class="wrap">
+        <div class="sec-head centre reveal">
+          <p class="kicker">The reports</p>
+          <h2 id="h-report">Write it down. Hand it over.</h2>
+          <p class="lead">Before an appointment, Daybook gathers everything since the last one into a few pages the team can read in a minute, with room for them to write. Print them, or send them to the nurse, the dietitian or the consultant from the app.</p>
+        </div>
+        <div class="chips rchips reveal" id="r-chips" role="group" aria-label="Which report to show" data-first="notes">
+          <button class="chip" type="button" data-report="notes" aria-pressed="true">Notes for the team</button>
+          <button class="chip" type="button" data-report="ibd" aria-pressed="false">Crohn's and colitis</button>
+          <button class="chip" type="button" data-report="pain" aria-pressed="false">Pain and pain relief</button>
+          <button class="chip" type="button" data-report="food" aria-pressed="false">Food diary</button>
+          <button class="chip" type="button" data-report="mood" aria-pressed="false">Mood and wellbeing</button>
+        </div>
+        <figure class="pages" data-report="notes" data-n="2" data-cap="Notes for the team: two pages for the nurse or doctor. The fortnight at a glance, the questions with room for the answers, the charts, and the week's notes in the patient's own words.">
+          <div class="page"><picture><source type="image/webp" srcset="media/report-notes-1.webp"><img src="media/report-notes-1.jpg" alt="Notes for the team, page 1: eight tiles with the fortnight's temperature, heart rate, blood pressure, oxygen, pain, sleep, protein and mood, the when-needed medicines, and the questions with ruled lines for the answers." width="1000" height="1416" loading="lazy"></picture></div>
+          <div class="page"><picture><source type="image/webp" srcset="media/report-notes-2.webp"><img src="media/report-notes-2.jpg" alt="Notes for the team, page 2: eight small charts of the fortnight's readings, and the notes from each week with the days that need a mention marked." width="1000" height="1414" loading="lazy"></picture></div>
+        </figure>
+        <figure class="pages" data-report="ibd" data-n="3" data-cap="Crohn's and colitis: bowels, blood and urgency against the person's own usual, flare days and calls to the advice line, injections and steroid courses, results exactly as the lab gave them, and the questions for the gastro team." hidden>
+          <div class="page"><picture><source type="image/webp" srcset="media/report-ibd-1.webp"><img src="media/report-ibd-1.jpg" alt="The Crohn's and colitis report, page 1: tiles for bowels a day, blood, urgency and flare days, four charts, the treatment, the flare plan and the results as given." width="1000" height="1416" loading="lazy"></picture></div>
+          <div class="page"><picture><source type="image/webp" srcset="media/report-ibd-2.webp"><img src="media/report-ibd-2.jpg" alt="Page 2: the month week by week, the flare log, the questions outside the gut, every result with its range, and the questions for the gastro team." width="1000" height="1414" loading="lazy"></picture></div>
+          <div class="page"><picture><source type="image/webp" srcset="media/report-ibd-3.webp"><img src="media/report-ibd-3.jpg" alt="Page 3: a ruled panel for the notes from the appointment." width="1000" height="1414" loading="lazy"></picture></div>
+        </figure>
+        <figure class="pages" data-report="pain" data-n="2" data-cap="Pain and pain relief, for the pain nurse: the scores morning, evening and between times, the worst pain, every dose of pain relief, the nights, and where the pain was in the patient's own words." hidden>
+          <div class="page"><picture><source type="image/webp" srcset="media/report-pain-1.webp"><img src="media/report-pain-1.jpg" alt="The Pain and pain relief report, page 1: four tiles, six small charts of the scores, the doses and the sleep, and the period in brief." width="1000" height="1416" loading="lazy"></picture></div>
+          <div class="page"><picture><source type="image/webp" srcset="media/report-pain-2.webp"><img src="media/report-pain-2.jpg" alt="Page 2: pain by time of day, the pain relief table, week by week, and where it was in the patient's words." width="1000" height="1414" loading="lazy"></picture></div>
+        </figure>
+        <figure class="pages" data-report="food" data-n="2" data-cap="The Food diary, for the dietitian: what was eaten and drunk each day, protein against the target, the food groups that came up, and points to discuss, with room for the dietitian's notes." hidden>
+          <div class="page"><picture><source type="image/webp" srcset="media/report-food-1.webp"><img src="media/report-food-1.jpg" alt="The Food diary report, page 1: the protein banner, four tiles, a protein chart with the target line, the food group grid, the drinks chart and points to discuss." width="1000" height="1416" loading="lazy"></picture></div>
+          <div class="page"><picture><source type="image/webp" srcset="media/report-food-2.webp"><img src="media/report-food-2.jpg" alt="Page 2: the energy and macro charts, and two week cards with a line for each day's meals." width="1000" height="1414" loading="lazy"></picture></div>
+        </figure>
+        <figure class="pages" data-report="mood" data-n="2" data-cap="Mood and wellbeing, for the therapist or GP: the best and hardest days and why, mood with pain and sleep behind it, the period in brief, and the weekly check in the person's own words. The raw notes are never printed." hidden>
+          <div class="page"><picture><source type="image/webp" srcset="media/report-mood-1.webp"><img src="media/report-mood-1.jpg" alt="The Mood and wellbeing report, page 1: four tiles, one chart of mood with pain and sleep behind it, the period in brief and quotes in the person's own words." width="1000" height="1416" loading="lazy"></picture></div>
+          <div class="page"><picture><source type="image/webp" srcset="media/report-mood-2.webp"><img src="media/report-mood-2.jpg" alt="Page 2: what helped and what was hardest, week by week, and the questions for the session." width="1000" height="1414" loading="lazy"></picture></div>
+        </figure>
+        <p class="rcap" id="r-cap"></p>
+        <div class="grid2 rholds">
+          <div class="text reveal">
+            <h3>Every report says where it came from</h3>
+            <ul>
+              <li><b>Your questions,</b> with space for the answers, and the answers recorded in clinic.</li>
+              <li><b>What changed,</b> in plain sentences: a high temperature, pain creeping up, nights of poor sleep, weight going down. Facts the app worked out, never advice.</li>
+              <li><b>The charts,</b> drawn from what was logged, with the limits your team uses shaded in.</li>
+              <li><b>The notes,</b> week by week, in your own words, or summarised by Daybook Assistant if you ask it to.</li>
+              <li><b>Sent from the app,</b> as a PDF, to any contact with an email address, with a copy to you.</li>
+            </ul>
+          </div>
+          <figure class="reveal d1">
+            <div class="pic parallax">
+              <picture>
+                <source type="image/webp" srcset="media/handover-800.webp 800w, media/handover-1600.webp 1600w" sizes="(min-width: 900px) 560px, 100vw">
+                <img src="media/handover-1600.jpg" srcset="media/handover-800.jpg 800w, media/handover-1600.jpg 1600w" sizes="(min-width: 900px) 560px, 100vw" alt="One person hands two printed pages across a wooden desk to another person's open hand, in a calm, bright room." width="1600" height="873" loading="lazy">
+              </picture>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Your circle -->
+    <section class="sec" aria-labelledby="h-circle">
+      <div class="wrap grid2 flip">
+        <figure class="reveal">
+          <div class="pic parallax">
+            <picture>
+              <source type="image/webp" srcset="media/circle-800.webp 800w, media/circle-1600.webp 1600w" sizes="(min-width: 900px) 560px, 100vw">
+              <img src="media/circle-1600.jpg" srcset="media/circle-800.jpg 800w, media/circle-1600.jpg 1600w" sizes="(min-width: 900px) 560px, 100vw" alt="Four friends in their forties and fifties laugh together around a garden table at dusk, with a candle, a teapot and string lights." width="1600" height="873" loading="lazy">
+            </picture>
+          </div>
+        </figure>
+        <div class="text reveal d1">
+          <p class="kicker">The people around you</p>
+          <h2 id="h-circle">Your circle sees what you see. Nobody has to ask twice.</h2>
+          <p>Invite the people who help: a partner, a daughter, a friend who drives you to chemo. They see the same record and the same report, from their own phone. The ones who want to know can keep up without you having to repeat it, and the ones you'd rather talk to about anything else can.</p>
+          <p>The circle is yours. Only you, or whoever set it up for you, can invite or remove anyone, and nobody outside it, Mark included, ever looks.</p>
+          <div class="quotes">
+            <blockquote class="quote">
+              <p>"I can keep track of what's happening with Mark without us having the same cancer conversation every time, so when we're together we can talk about other things. But there's always enough in the app that I can see when they might need extra help, and I can just ask Shelley what I need to do."</p>
+              <p class="by">Hayley<span>, Mark and Shelley's friend</span></p>
+            </blockquote>
+            <blockquote class="quote">
+              <p>"This is brilliant. It's simple to navigate, the charts are clear, and if I don't understand something I can just ask."</p>
+              <p class="by">Keith<span>, Mark's oldest friend</span></p>
+            </blockquote>
+            <!-- Shelley's quote goes here once she has given it (the Crohn's friend's words sit under How it started). Nothing made up goes on this page. -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Try it -->
+    <section class="sec solid" id="try" aria-labelledby="h-try">
+      <div class="wrap">
+        <div class="sec-head centre reveal">
+          <p class="kicker">Try it</p>
+          <h2 id="h-try">Have a look round first. No account, nothing saved.</h2>
+          <p class="lead">Each demo is a made-up person with a month of records. Tap around, log things, open the reports. When you leave, it is gone.</p>
+        </div>
+        <div class="try2">
+          <a class="trycard reveal" href="https://app.mymedicaldaybook.co.uk/?preview=cancer">
+            <span class="tag">Demo</span>
+            <h3>Cancer treatment</h3>
+            <p>Sam, part way through chemo: the check-ins, the treatment calendar with its cycles, side effects after each session, the medicines, and Notes for the team.</p>
+            <span class="go">Open the cancer demo <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="trycard reveal d1" href="https://app.mymedicaldaybook.co.uk/?preview=ibd">
+            <span class="tag">Demo</span>
+            <h3>Crohn's or colitis</h3>
+            <p>Jo, through a flare: bowels with blood and urgency, the flare plan and the advice line, results as the lab gave them, injections on the calendar, and the Crohn's and colitis report.</p>
+            <span class="go">Open the Crohn's demo <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+        <p class="trynote">The demos open the app itself in your browser. Tap Leave demo at the top to come back here.</p>
+      </div>
+    </section>
+
+    <!-- 9. Join the Beta -->
+    <section class="sec" id="beta" aria-labelledby="h-beta">
+      <div class="wrap grid2">
+        <div class="text reveal">
+          <p class="kicker">By invitation</p>
+          <h2 id="h-beta">Join the Beta.</h2>
+          <p class="lead">Daybook is free throughout the Beta, and Beta circles keep the full app free for a year after it reaches the App Store, with everything they have logged.</p>
+          <p>The Beta is by invitation. Whoever told you about Daybook, a nurse, a clinic or a friend, gives you a short code. Type it here and the next steps appear. It works in full today; a few things may still change, and Mark reads every message himself.</p>
+          <p class="small muted">No code, or lost it? Email <a href="mailto:support@mymedicaldaybook.co.uk">support@mymedicaldaybook.co.uk</a> and say who told you about Daybook. Already in someone's circle? Ask them for an invite link instead; it needs no code.</p>
+        </div>
+        <div class="codebox reveal d1">
+          <label for="beta-code">Your Beta code</label>
+          <div class="coderow">
+            <input id="beta-code" type="text" inputmode="text" autocapitalize="characters" autocomplete="off" spellcheck="false" maxlength="24" placeholder="Type the code">
+            <button class="btn" type="button" id="beta-check">Check the code</button>
+          </div>
+          <p class="codemsg" id="beta-msg" role="status" aria-live="polite"></p>
+          <div class="codego" id="beta-go" hidden>
+            <p class="okline" id="beta-ok"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg><span>Your code is good.</span></p>
+            <div class="forpick" role="group" aria-labelledby="beta-for-q">
+              <p class="forq" id="beta-for-q">What will you use Daybook for?</p>
+              <a class="btn" data-for="cancer" href="https://app.mymedicaldaybook.co.uk/">Cancer treatment</a>
+              <a class="btn" data-for="ibd" href="https://app.mymedicaldaybook.co.uk/">Crohn's or colitis</a>
+              <p class="small muted">Either can be changed in Daybook's Settings afterwards.</p>
+            </div>
+            <ol>
+              <li><b>Create an account.</b> Your code and your choice are filled in for you. It asks for your first name, whether Daybook is for you or someone you care for, an email address and a password.</li>
+              <li><b>Add it to your Home Screen,</b> so it opens like an app and can send reminders. iPhone or iPad: in Safari, tap the Share button <svg class="ico" viewBox="0 0 24 24" aria-label="the square with an arrow pointing up" role="img"><path d="M12 3v12M8 7l4-4 4 4M5 11v9h14v-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> at the bottom, then <b>Add to Home Screen</b>. Android: in Chrome, the three dots, then <b>Add to Home screen</b>. Mac: in Safari, File, then <b>Add to Dock</b>.</li>
+              <li><b>Let the set-up walk you through the rest:</b> your name on the reports, who to contact, and Tap to speak. Five minutes, then log the first day.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Private by design -->
+    <section class="band" aria-labelledby="h-private">
+      <div class="wrap">
+        <h2 id="h-private">Private by design.</h2>
+        <div class="promises">
+          <div class="promise">
+            <svg viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="19" width="24" height="18" rx="4"/><path d="M15 19v-5a7 7 0 0 1 14 0v5"/><circle cx="22" cy="28" r="2"/></svg>
+            <div><b>Yours, and only yours.</b><p>Each circle's records are seen only by its own members, enforced by the database itself. Nobody else, and nothing sold to anyone.</p></div>
+          </div>
+          <div class="promise">
+            <svg viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 38s-11-9.5-11-18a11 11 0 0 1 22 0c0 8.5-11 18-11 18z"/><circle cx="22" cy="20" r="4"/></svg>
+            <div><b>Kept in the UK.</b><p>Your records are stored in London, over a secure connection. Mark 1 Apps Ltd is registered with the ICO.</p></div>
+          </div>
+          <div class="promise">
+            <svg viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 24V11a3 3 0 0 1 6 0v10"/><path d="M24 21a3 3 0 0 1 6 0v3a3 3 0 0 1 6 0v6a9 9 0 0 1-9 9h-3a9 9 0 0 1-8-5l-5-9a3 3 0 0 1 5-3l2 3"/></svg>
+            <div><b>Nothing leaves without a tap.</b><p>A report goes to the team only when you send it. The AI helper reads a letter only when you ask it to, and keeps nothing.</p></div>
+          </div>
+          <div class="promise">
+            <svg viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="22" r="13"/><path d="M22 19v9"/><circle cx="22" cy="15" r="1.2" fill="currentColor"/></svg>
+            <div><b>Not medical advice.</b><p>Daybook keeps the record and does the sums. Your team makes the decisions. In an emergency, call 999 or 111.</p></div>
+          </div>
+        </div>
+        <p style="margin-top: 28px"><a href="privacy.html">Read the privacy policy</a>, written in plain English.</p>
+      </div>
+    </section>
+
+    <!-- 11. The close -->
+    <section class="sec" aria-labelledby="h-close">
+      <div class="wrap grid2">
+        <div class="text reveal">
+          <h2 id="h-close">Less to remember. More to say.</h2>
+          <p class="lead">Set it up in a few minutes on an iPhone, iPad, Mac or Android phone, and invite your circle when you're ready.</p>
+          <div class="ctas">
+            <a class="btn" href="#beta">Join the Beta</a>
+            <a class="btn-ghost" href="#try">Try the demo first</a>
+          </div>
+          <p class="muted">Questions first? Email <a href="mailto:support@mymedicaldaybook.co.uk">support@mymedicaldaybook.co.uk</a> and Mark will answer himself.</p>
+        </div>
+        <figure class="reveal d1">
+          <div class="pic parallax">
+            <picture>
+              <source type="image/webp" srcset="media/dawn-800.webp 800w, media/dawn-1600.webp 1600w" sizes="(min-width: 900px) 620px, 100vw">
+              <img src="media/dawn-1600.jpg" srcset="media/dawn-800.jpg 800w, media/dawn-1600.jpg 1600w" sizes="(min-width: 900px) 620px, 100vw" alt="Sunrise over frosty fields and a lone oak tree, seen through an old sash window, with a mug of tea and a closed notebook on the sill." width="1600" height="873" loading="lazy">
+            </picture>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <a class="lockup" href="#top">
+        <img src="icons/icon-192.png" alt="" width="44" height="44">
+        <span><span class="pre">My Medical</span><span class="name">Daybook</span><span class="sr-only">, back to the top</span></span>
+      </a>
+      <nav aria-label="Legal and support"><a href="privacy.html">Privacy</a><a href="terms.html">Terms of use</a><a href="support.html">Support</a><a href="beta.html">Join the Beta</a></nav>
+      <span class="co"><img src="icons/mark1apps-line.png" alt="" width="32" height="28">Made by Mark 1 Apps Ltd</span>
+      <p>Copyright <span data-year>2026</span> Mark 1 Apps Ltd. All rights reserved. Mark 1 Apps Ltd is a company registered in England and Wales, number 17510025. Registered office: 71-75 Shelton Street, London WC2H 9JQ.</p>
+      <p>Daybook is not a medical device and gives no medical advice. In an emergency call 999; for urgent advice call 111.</p>
+    </div>
+  </footer>
+
+  <script src="js/site.js?v=9" defer></script>
+</body>
+</html>
