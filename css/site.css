@@ -317,3 +317,18 @@ footer .co img { height: 28px; width: auto; }
 .step .ico { width: 1.1em; height: 1.1em; vertical-align: -0.15em; color: var(--teal); }
 @media (min-width: 900px) { .steps { grid-template-columns: 1fr 1fr 1fr; gap: 24px; } .step { padding: 92px 26px 28px 26px; } .step .n { left: 26px; top: 26px; } .step h3 { padding-top: 0; } }
 @media (max-width: 420px) { .step { padding: 80px 20px 22px 20px; } .step .n { left: 20px; top: 20px; } .step h3 { padding-top: 0; } }
+
+/* How it started: the story, one problem at a time (v4, 20 October 2026) */
+.grid2.story { align-items: start; }
+@media (min-width: 900px) { .grid2.story > figure { position: sticky; top: 104px; } }
+.grew { list-style: none; margin: 4px 0 0; padding: 0; counter-reset: grew; display: grid; }
+.grew li { counter-increment: grew; position: relative; padding: 0 0 24px 54px; }
+.grew li::before { content: counter(grew); position: absolute; left: 0; top: 0; width: 36px; height: 36px; border-radius: 50%; background: var(--teal-fill); color: #fff; font-weight: 600; font-size: 17px; display: grid; place-items: center; font-variant-numeric: tabular-nums; }
+.grew li::after { content: ""; position: absolute; left: 17px; top: 42px; bottom: 6px; width: 2px; border-radius: 2px; background: color-mix(in srgb, var(--teal-fill) 35%, transparent); }
+.grew li:last-child { padding-bottom: 4px; }
+.grew li:last-child::after { display: none; }
+.grew h3 { font-size: 22px; margin: 3px 0 6px; }
+.grew p { margin: 0; }
+.grid2.shelley { margin-top: clamp(56px, 8vw, 104px); }
+.quote.placeholder { background: transparent; border: 2px dashed var(--line); border-left: 6px solid var(--line); }
+.quote.placeholder p { color: var(--slate); }

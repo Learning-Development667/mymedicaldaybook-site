@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="css/site.css?v=7">
+  <link rel="stylesheet" href="css/site.css?v=8">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mymedicaldaybook.co.uk/#website","url":"https://mymedicaldaybook.co.uk/","name":"My Medical Daybook","alternateName":"Daybook","description":"Your companion between appointments.","inLanguage":"en-GB"},{"@type":"Organization","@id":"https://mymedicaldaybook.co.uk/#org","name":"Mark 1 Apps Ltd","url":"https://mymedicaldaybook.co.uk/","logo":"https://mymedicaldaybook.co.uk/icons/icon-512.png"}]}</script>
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -72,24 +72,28 @@
     <section class="sec solid" id="why" aria-labelledby="h-gap">
       <div class="wrap grid2">
         <figure class="reveal">
-          <div class="pic film-walk">
-            <img src="media/walk-poster-1280.jpg" srcset="media/walk-poster-1280.jpg 1280w, media/walk-poster-1920.jpg 1920w" sizes="(min-width: 900px) 560px, 100vw" alt="A couple in their late fifties walk arm in arm along a frosty farm track towards a lone oak tree at sunrise." width="1280" height="720" loading="lazy">
-            <video class="walk" muted playsinline preload="none" aria-hidden="true" tabindex="-1" data-src-1280="media/walk-1280.mp4" data-src-1920="media/walk-1920.mp4" data-webm="media/walk-1280.webm"></video>
+          <div class="pic parallax">
+            <picture>
+              <source type="image/webp" srcset="media/night-800.webp 800w, media/night-1600.webp 1600w" sizes="(min-width: 900px) 560px, 100vw">
+              <img src="media/night-1600.jpg" srcset="media/night-800.jpg 800w, media/night-1600.jpg 1600w" sizes="(min-width: 900px) 560px, 100vw" alt="A bedside table at night with a lamp, a glass of water, reading glasses, a phone and an open notebook with a pen." width="1600" height="873" loading="lazy">
+            </picture>
           </div>
         </figure>
         <div class="text reveal d1">
           <p class="kicker">Why Daybook exists</p>
-          <h2 id="h-gap">The questions come at 3am. By the appointment, they've gone.</h2>
-          <p>When I was told I had stage 4 pancreatic cancer, already in my liver and my spine, everything became a blur. Tablets at different times. Temperatures. Side effects. What I'd managed to eat. And the questions, always in the middle of the night.</p>
-          <p>Some went on scraps of paper. Most went nowhere. I'd sit down in front of the oncologist with ten minutes and not know where to start.</p>
-          <p class="by">Mark Brown<span>, who made Daybook</span></p>
+          <h2 id="h-gap">The questions come when they come. By the appointment, they've gone.</h2>
+          <p>In August 2026 I was told I had stage 4 pancreatic cancer, already in my liver and my spine. I was 44. I was given 6 to 12 months, depending on how I responded to treatment.</p>
+          <p>After that, everything became a blur. News like that takes your memory with it.</p>
+          <p>Then came the everyday part. Tablets at different times. Temperatures. Side effects. What I'd managed to eat. And the questions, which arrived whenever they liked: in the car, over dinner, lying awake.</p>
+          <p>Some went on scraps of paper. Most went nowhere. I'd forget to tell Shelley what I wanted to ask. By the time I sat down in front of the oncologist, I had very little to say and no idea where to start.</p>
+          <p class="by">Mark Brown<span>, creator of Daybook</span></p>
         </div>
       </div>
     </section>
 
-    <!-- 3. How it started -->
+    <!-- 3. How it started, one problem at a time, and Shelley -->
     <section class="sec" aria-labelledby="h-list">
-      <div class="wrap grid2 flip">
+      <div class="wrap grid2 flip story">
         <figure class="reveal">
           <div class="pic parallax">
             <picture>
@@ -100,9 +104,39 @@
         </figure>
         <div class="text reveal d1">
           <p class="kicker">How it started</p>
-          <h2 id="h-list">I believed in the doctors. Shelley did the research. Together it got easier.</h2>
-          <p>Shelley kept the list. I built a simple tracker so neither of us had to remember. Medicines and when they were taken. Temperature, blood pressure, weight. What I ate and drank. How the day felt, morning and evening. And every question, the moment it came to us.</p>
-          <p>It grew into Daybook: one place, shared between the two of us, so nothing depended on either of us remembering. Then friends with Crohn's asked for it, and it grew again.</p>
+          <h2 id="h-list">The worst news of our lives. So we made something with it.</h2>
+          <p class="lead">Daybook wasn't planned. It grew one problem at a time.</p>
+          <ol class="grew">
+            <li><h3>Medicines</h3><p>It started as a way to track my tablets. I still forgot them, so I added Shelley. Her phone gets my reminders too, so she can tell me to take them, or fetch them for me.</p></li>
+            <li><h3>Pain</h3><p>Then new pains started. I wanted to ask the nurses and doctors what was causing them, but I'd forget, so I logged them as they happened.</p></li>
+            <li><h3>Questions</h3><p>Then we realised Shelley could add her own questions, the ones that came out of our conversations. I've always been dreadful at admin. Shelley has always been the best administrator I know; even our friends ask her to sort theirs. That's when I could see the beginning of Daybook.</p></li>
+            <li><h3>Food</h3><p>I had to put on weight before treatment, and Shelley kept asking what I'd eaten. A food diary made it easy to answer.</p></li>
+            <li><h3>Check-ins</h3><p>As treatment went on, I met new people, like the pain consultant. Morning and evening check-ins gave us a proper way to talk about my pain.</p></li>
+            <li><h3>Mood</h3><p>I started therapy, so I began tracking my mood and wellbeing. I'm good at telling myself I'm fine when I'm not, so Shelley can score how she thinks I am too.</p></li>
+            <li><h3>Reports</h3><p>With all of that in one place, it made sense to summarise it. Before each appointment I send it to my nurses and doctors, or print it and take it in: my readings, my week and, most importantly, every question we'd collected.</p></li>
+          </ol>
+          <p>Then friends with Crohn's asked for it, and it grew again.</p>
+          <!-- PREVIEW ONLY: remove before going live unless her own approved words have arrived. Nothing made up goes on this page. -->
+          <blockquote class="quote placeholder preview-only">
+            <p>Space for my Crohn's friend's own words: seeing Daybook, asking whether it could work for Crohn's, and what she had to keep track of before.</p>
+            <p class="by">Her name<span>, living with Crohn's</span></p>
+          </blockquote>
+          <p>Daybook doesn't give medical advice, and never will. It's a personal medical journal: what happened, in our own words, kept for the people who need to see it.</p>
+        </div>
+      </div>
+      <div class="wrap grid2 shelley">
+        <figure class="reveal">
+          <div class="pic film-walk">
+            <img src="media/walk-poster-1280.jpg" srcset="media/walk-poster-1280.jpg 1280w, media/walk-poster-1920.jpg 1920w" sizes="(min-width: 900px) 560px, 100vw" alt="A couple in their late fifties walk arm in arm along a frosty farm track towards a lone oak tree at sunrise." width="1280" height="720" loading="lazy">
+            <video class="walk" muted playsinline preload="none" aria-hidden="true" tabindex="-1" data-src-1280="media/walk-1280.mp4" data-src-1920="media/walk-1920.mp4" data-webm="media/walk-1280.webm"></video>
+          </div>
+        </figure>
+        <div class="text reveal d1">
+          <p class="kicker">Shelley</p>
+          <h2 id="h-shelley">None of this works without her.</h2>
+          <p>I have the ideas. Shelley is my sounding board, and the dedicated grown-up who gets me thinking.</p>
+          <p>We've been married 22 years. This news hit her as hard as it hit me. We were supposed to grow old together.</p>
+          <p>Daybook is the good thing we made out of the worst news, and we made it together.</p>
         </div>
       </div>
     </section>
@@ -290,7 +324,7 @@
               <p>"This is brilliant. It's simple to navigate, the charts are clear, and if I don't understand something I can just ask."</p>
               <p class="by">Keith<span>, Mark's oldest friend</span></p>
             </blockquote>
-            <!-- Charlene's quote (Crohn's) and Shelley's go here once they have given them. Nothing made up goes on this page. -->
+            <!-- Shelley's quote goes here once she has given it (the Crohn's friend's words sit under How it started). Nothing made up goes on this page. -->
           </div>
         </div>
       </div>
