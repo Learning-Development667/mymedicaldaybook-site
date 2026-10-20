@@ -332,3 +332,13 @@ footer .co img { height: 28px; width: auto; }
 .grid2.shelley { margin-top: clamp(56px, 8vw, 104px); }
 .quote.placeholder { background: transparent; border: 2px dashed var(--line); border-left: 6px solid var(--line); }
 .quote.placeholder p { color: var(--slate); }
+
+/* The circle: the quote under the picture on a wide screen, after the words on a phone (20 October 2026) */
+.grid2.circle { grid-template-areas: "pic" "text" "quote"; }
+.grid2.circle > figure { grid-area: pic; }
+.grid2.circle > .text { grid-area: text; }
+.grid2.circle > .quotes { grid-area: quote; margin-top: 0; max-width: 34em; }
+@media (min-width: 900px) {
+  .grid2.circle { grid-template-areas: "text pic" "text quote"; align-items: start; row-gap: 22px; }
+  .grid2.circle > .text { align-self: center; }
+}
