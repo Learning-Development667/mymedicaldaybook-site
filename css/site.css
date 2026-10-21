@@ -270,6 +270,7 @@ a.trycard:hover h3 { color: var(--teal); }
 .quotes { display: grid; gap: 18px; margin-top: 8px; }
 .quote { background: var(--card); border-radius: var(--r); padding: 22px 24px; border-left: 6px solid var(--warm); margin: 0; }
 .quote p { font-size: 19px; }
+.quote p + p { margin-top: 14px; }
 .quote .by { margin-top: 12px; }
 
 /* private by design */
