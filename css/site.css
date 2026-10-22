@@ -121,13 +121,14 @@ p { margin: 0; }
 .hero-band .cue::before { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid #fff; animation: cueRing 1.8s ease-out infinite; }
 .hero-band svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; margin-top: 3px; }
 .hero-band::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(105deg, transparent 35%, var(--sweep) 50%, transparent 65%); background-size: 260% 100%; background-repeat: no-repeat; background-position: 130% 0; animation: bandSweep 5.5s ease-in-out 1.6s infinite; }
-.hero-band:hover span { text-decoration: underline; text-underline-offset: 3px; }
+.hero-band:hover .band-main { text-decoration: underline; text-underline-offset: 3px; }
 @keyframes bandBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(7px); } }
 @keyframes cueRing { 0% { transform: scale(1); opacity: .8; } 100% { transform: scale(1.7); opacity: 0; } }
 @keyframes bandSweep { 0% { background-position: 130% 0; } 30%, 100% { background-position: -30% 0; } }
 @media (prefers-reduced-motion: reduce) { .hero-band .cue, .hero-band .cue::before, .hero-band::after { animation: none; } .hero-band .cue::before { display: none; } .hero-band::after { display: none; } }
-.hero-band .short { display: none; }
-@media (max-width: 560px) { .hero-band .long { display: none; } .hero-band .short { display: inline; } }
+.hero-band .band-main { display: block; max-width: 22em; }
+.hero-band .band-main > span { white-space: nowrap; }
+.hero-band .band-sub { display: block; margin-top: 2px; font-size: 15px; font-weight: 500; opacity: .92; }
 @media (max-width: 380px) { .hero-band { font-size: 16px; } .hero-band .cue { width: 42px; height: 42px; margin-top: 6px; } }
 /* The header's button drops "free" where the name would be crowded; the hero's button keeps it. */
 header .btn .short { display: none; }
