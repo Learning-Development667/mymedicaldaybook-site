@@ -102,12 +102,11 @@ p { margin: 0; }
 .hero .film video { opacity: 0; transition: opacity .6s ease; }
 .hero .film.playing video { opacity: 1; }
 .hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 46%; z-index: 1; background: linear-gradient(to top, rgba(10, 24, 30, .78), rgba(10, 24, 30, .42) 55%, rgba(10, 24, 30, 0)); pointer-events: none; }
-.hero-top { position: relative; z-index: 2; text-align: center; justify-self: center; align-self: start; margin-top: clamp(40px, 9vh, 96px); padding: clamp(24px, 4vw, 44px) clamp(28px, 6vw, 72px) clamp(28px, 4vw, 44px); max-width: 100%; background: radial-gradient(closest-side, color-mix(in srgb, var(--paper) 90%, transparent) 58%, color-mix(in srgb, var(--paper) 0%, transparent)); }
+.hero-top { position: relative; z-index: 2; text-align: center; justify-self: center; align-self: start; margin-top: clamp(12px, 4vh, 56px); padding: clamp(24px, 4vw, 44px) clamp(28px, 6vw, 72px) clamp(28px, 4vw, 44px); max-width: 100%; background: radial-gradient(closest-side, color-mix(in srgb, var(--paper) 92%, transparent) 68%, color-mix(in srgb, var(--paper) 0%, transparent)); }
 .hero-pre { display: block; margin-bottom: 8px; font-weight: 600; font-size: clamp(14px, 2.4vw, 20px); letter-spacing: .22em; line-height: 1; color: var(--paper-teal); text-transform: uppercase; }
-.hero-brand { display: block; font-family: var(--head); font-weight: 600; font-size: clamp(64px, 14vw, 128px); letter-spacing: -0.01em; line-height: 1.05; color: var(--paper-ink); }
-.hero-strap { display: block; margin: 14px auto 0; color: var(--paper-slate); font-size: clamp(18px, 2.2vw, 23px); letter-spacing: .01em; max-width: 24em; text-wrap: balance; }
-.hero-pill { display: inline-block; margin-top: 16px; padding: 6px 14px; border-radius: 999px; background: color-mix(in srgb, var(--paper-ink) 10%, transparent); color: var(--paper-slate); font-size: 14px; font-weight: 600; letter-spacing: .04em; }
-.hero-top .ctas { justify-content: center; margin-top: 26px; }
+.hero-brand { display: block; font-family: var(--head); font-weight: 600; font-size: clamp(72px, 19vw, 140px); letter-spacing: -0.01em; line-height: 1.05; color: var(--paper-ink); }
+.hero-strap { display: block; margin: 14px auto 0; text-shadow: 0 0 6px var(--paper), 0 0 14px var(--paper), 0 0 24px var(--paper); color: var(--paper-slate); font-size: clamp(18px, 2.2vw, 23px); letter-spacing: .01em; max-width: 24em; text-wrap: balance; }
+.hero-icon { display: block; width: clamp(96px, 26vw, 132px); height: auto; margin: 26px auto 0; border-radius: 24%; box-shadow: 0 10px 30px rgba(23, 38, 58, .22); }
 .hero-top .btn-ghost { border-color: var(--paper-teal); color: var(--paper-teal); background: color-mix(in srgb, var(--paper) 72%, transparent); }
 .hero-top .btn-ghost:hover { background: #DDEEEF; color: #135A60; }
 .hero-foot { position: relative; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 26px; padding: 0 var(--gutter) clamp(14px, 2.5vh, 22px); color: rgba(255, 255, 255, .9); font-size: 15px; text-align: center; }
@@ -117,22 +116,29 @@ p { margin: 0; }
    The arrow sits centred under the words, bobbing and fading slowly (about once every two seconds, far below the
    three-a-second flash limit), and a soft sweep of light crosses the glass every few seconds. All off under reduced
    motion. */
-.hero-band { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; min-height: 64px; padding: 10px var(--gutter) 6px; overflow: hidden; font-size: 17px; font-weight: 600; letter-spacing: .01em; text-decoration: none; text-align: center; color: #fff; background: rgba(255, 255, 255, .13); border-top: 1px solid rgba(255, 255, 255, .3); -webkit-backdrop-filter: blur(12px) saturate(1.2); backdrop-filter: blur(12px) saturate(1.2); text-shadow: 0 1px 8px rgba(0, 0, 0, .45); --sweep: rgba(255, 255, 255, .5); }
-.hero-band svg { flex: none; width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; margin-top: 2px; animation: bandBob 2s ease-in-out infinite; }
+.hero-band { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; min-height: 64px; padding: 12px var(--gutter) 20px; overflow: hidden; font-size: 19px; font-weight: 600; letter-spacing: .01em; text-decoration: none; text-align: center; color: #fff; background: rgba(255, 255, 255, .13); border-top: 1px solid rgba(255, 255, 255, .3); -webkit-backdrop-filter: blur(12px) saturate(1.2); backdrop-filter: blur(12px) saturate(1.2); text-shadow: 0 1px 8px rgba(0, 0, 0, .45); --sweep: rgba(255, 255, 255, .5); }
+.hero-band .cue { position: relative; display: grid; place-items: center; width: 48px; height: 48px; margin-top: 8px; border-radius: 50%; background: #fff; color: var(--paper-teal); box-shadow: 0 4px 14px rgba(0, 0, 0, .3); animation: bandBob 1.8s ease-in-out infinite; }
+.hero-band .cue::before { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid #fff; animation: cueRing 1.8s ease-out infinite; }
+.hero-band svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; margin-top: 3px; }
 .hero-band::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(105deg, transparent 35%, var(--sweep) 50%, transparent 65%); background-size: 260% 100%; background-repeat: no-repeat; background-position: 130% 0; animation: bandSweep 5.5s ease-in-out 1.6s infinite; }
 .hero-band:hover span { text-decoration: underline; text-underline-offset: 3px; }
-@keyframes bandBob { 0%, 100% { transform: translateY(-2px); opacity: 1; } 50% { transform: translateY(4px); opacity: .35; } }
+@keyframes bandBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(7px); } }
+@keyframes cueRing { 0% { transform: scale(1); opacity: .8; } 100% { transform: scale(1.7); opacity: 0; } }
 @keyframes bandSweep { 0% { background-position: 130% 0; } 30%, 100% { background-position: -30% 0; } }
-@media (prefers-reduced-motion: reduce) { .hero-band svg, .hero-band::after { animation: none; } .hero-band::after { display: none; } }
+@media (prefers-reduced-motion: reduce) { .hero-band .cue, .hero-band .cue::before, .hero-band::after { animation: none; } .hero-band .cue::before { display: none; } .hero-band::after { display: none; } }
 .hero-band .short { display: none; }
 @media (max-width: 560px) { .hero-band .long { display: none; } .hero-band .short { display: inline; } }
+@media (max-width: 380px) { .hero-band { font-size: 16px; } .hero-band .cue { width: 42px; height: 42px; margin-top: 6px; } }
+/* The header's button drops "free" where the name would be crowded; the hero's button keeps it. */
+header .btn .short { display: none; }
+@media (max-width: 420px) { header .btn .long { display: none; } header .btn .short { display: inline; } }
+@media (max-width: 360px) { header.top .lockup > span:not(.sr-only) .pre, header.top .lockup > span .name { display: none; } header .btn { padding: 10px 14px; font-size: 16px; white-space: nowrap; } }
 /* A short screen: the title block gives up height so the band stays on the first screen. */
 @media (max-height: 800px) {
-  .hero-top { margin-top: clamp(8px, 3vh, 40px); padding-top: clamp(12px, 2.5vh, 28px); padding-bottom: clamp(12px, 2.5vh, 28px); }
-  .hero-brand { font-size: clamp(56px, min(14vw, 13vh), 120px); }
+  .hero-top { margin-top: 0; padding-top: clamp(12px, 2.5vh, 28px); padding-bottom: clamp(12px, 2.5vh, 28px); }
+  .hero-brand { font-size: clamp(60px, min(19vw, 14vh), 120px); }
   .hero-strap { margin-top: 8px; }
-  .hero-pill { margin-top: 10px; }
-  .hero-top .ctas { margin-top: 16px; }
+  .hero-icon { width: clamp(72px, 13vh, 112px); margin-top: 16px; }
   .hero-foot { padding-bottom: 14px; }
 }
 .hero-in { animation: heroIn 1.4s cubic-bezier(.2, .7, .2, 1) .3s both; }
