@@ -200,7 +200,35 @@ html.js .reveal.d1 { transition-delay: .08s; } html.js .reveal.d2 { transition-d
 @keyframes gpulse { 0% { transform: scale(.72); opacity: 1; } 100% { transform: scale(1.25); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .gring { animation: none; } }
 .gphone[hidden], .gring[hidden] { display: none; }
-.gwords { display: grid; gap: 16px; }
+.guide { grid-template-areas: "chips" "phone" "words"; }
+.gchips { grid-area: chips; }
+.gphone { grid-area: phone; }
+.gwords { grid-area: words; display: grid; gap: 16px; }
+/* A phone or a small tablet: the topics in one row that scrolls sideways inside itself (never the page), the picture
+   sized to leave the step, the caption and the buttons on the same screen, and the list folded away. */
+@media (max-width: 819px) {
+  .chips.gchips { flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x proximity; scroll-padding-inline: var(--gutter); scrollbar-width: none; margin: 0 calc(-1 * var(--gutter)); padding: 4px var(--gutter) 8px; -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 32px), transparent 100%); mask-image: linear-gradient(90deg, #000 calc(100% - 32px), transparent 100%); }
+  .chips.gchips::-webkit-scrollbar { display: none; }
+  .gchips .chip { flex: none; scroll-snap-align: start; }
+  /* The step's words and buttons join the guide's own grid (display: contents), so the arrows sit either side of
+     the picture like a photo carousel and the caption follows straight under it: picture and words on one screen. */
+  .guide { grid-template-columns: 1fr auto 1fr; grid-template-areas: "chips chips chips" "prev phone next" "step step step" "cap cap cap" "play play play" "all all all"; gap: 10px 8px; }
+  .guide .gwords, .guide .gctl { display: contents; }
+  .guide > *, .gwords > *, .gctl > * { min-width: 0; }
+  .gphone { width: min(320px, calc(100vw - 2 * var(--gutter) - 128px), max(190px, calc((100svh - 300px) * 390 / 844))); margin: 4px 0; }
+  #g-prev { grid-area: prev; justify-self: end; }
+  #g-next { grid-area: next; justify-self: start; }
+  .guide .gctl .arrow { flex: none; width: 52px; height: 52px; min-height: 52px; border-radius: 50%; align-self: center; }
+  .gstep { grid-area: step; margin-top: 6px; }
+  .gcap { grid-area: cap; min-height: 0; }
+  .guide .gctl .play { grid-area: play; }
+  .gall { grid-area: all; }
+}
+.gall summary { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; color: var(--teal); font-weight: 600; list-style: none; }
+.gall summary::-webkit-details-marker { display: none; }
+.gall summary::after { content: ""; width: 9px; height: 9px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-3px); transition: transform .2s; }
+.gall[open] summary::after { transform: rotate(225deg) translateY(-1px); }
+.gall .gintro { margin: 4px 0 12px; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip { min-height: 44px; padding: 8px 16px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--card); color: var(--ink); font: 500 16px var(--body); cursor: pointer; }
 .chip:hover { border-color: var(--teal); color: var(--teal); }
@@ -216,7 +244,7 @@ html.js .reveal.d1 { transition-delay: .08s; } html.js .reveal.d2 { transition-d
 .glist li { padding-left: 4px; cursor: pointer; }
 .glist li.is-current { color: var(--teal); font-weight: 600; }
 .glist li::marker { color: var(--muted); }
-@media (min-width: 820px) { .guide { grid-template-columns: 380px 1fr; } .gphone { margin: 0; } }
+@media (min-width: 820px) { .guide { grid-template-columns: 380px 1fr; grid-template-areas: "phone chips" "phone words"; grid-template-rows: auto 1fr; } .gphone { margin: 0; } .gall summary { display: none; } }
 
 /* the reports: real pages, fanned out */
 .rchips { margin-bottom: 26px; }

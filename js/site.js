@@ -102,7 +102,12 @@
     };
     var openTopic = function (t, auto) {
       G.topic = t; G.i = 0;
-      $$('button', gchips).forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-topic') === t.key ? 'true' : 'false'); });
+      $$('button', gchips).forEach(function (b) {
+        var on = b.getAttribute('data-topic') === t.key;
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        /* in the sideways row on a phone, bring the chosen topic into view without moving the page */
+        if (on && gchips.scrollWidth > gchips.clientWidth) gchips.scrollTo({ left: Math.max(0, b.offsetLeft - gchips.offsetLeft - 16), behavior: reduced ? 'auto' : 'smooth' });
+      });
       gintro.textContent = t.intro || '';
       glist.innerHTML = '';
       t.steps.forEach(function (st, i) { var li = document.createElement('li'); li.textContent = st.caption; li.addEventListener('click', function () { stop(); show(i); }); glist.appendChild(li); });
@@ -110,7 +115,7 @@
       if (!reduced && auto !== false) play(); else stop();
     };
     var load = function () {
-      return fetch('guide/guide.json?v=12').then(function (r) { if (!r.ok) throw new Error('guide ' + r.status); return r.json(); });
+      return fetch('guide/guide.json?v=13').then(function (r) { if (!r.ok) throw new Error('guide ' + r.status); return r.json(); });
     };
     load().then(function (d) {
       G.data = d;
@@ -122,6 +127,8 @@
         b.addEventListener('click', function () { openTopic(t); });
         gchips.appendChild(b);
       });
+      var gall = $('#g-all');
+      if (gall && window.matchMedia && window.matchMedia('(min-width: 820px)').matches) gall.open = true;
       var first = d.topics.filter(function (x) { return x.key === 'story'; })[0] || d.topics[0];
       openTopic(first, true);
     }).catch(function (e) { gcap.textContent = 'The guide needs a connection. Try again when you have signal.'; gchips.innerHTML = ''; });

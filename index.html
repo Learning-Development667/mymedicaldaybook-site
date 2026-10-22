@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="css/site.css?v=12">
+  <link rel="stylesheet" href="css/site.css?v=13">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mymedicaldaybook.co.uk/#website","url":"https://mymedicaldaybook.co.uk/","name":"My Medical Daybook","alternateName":"Daybook","description":"Your companion between appointments.","inLanguage":"en-GB"},{"@type":"Organization","@id":"https://mymedicaldaybook.co.uk/#org","name":"Mark 1 Apps Ltd","url":"https://mymedicaldaybook.co.uk/","logo":"https://mymedicaldaybook.co.uk/icons/icon-512.png"}]}</script>
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -231,12 +231,12 @@
           <p class="lead">These are the app's own screens, with made-up data, played as they happen. Start with the whole story: a day's logging, a question, then the report made and sent.</p>
         </div>
         <div class="guide reveal d1">
+          <div class="chips gchips" id="g-chips" role="group" aria-label="Walk-throughs"><span class="muted">Loading the walk-throughs</span></div>
           <div class="gphone" id="g-phone" role="img" aria-label="Daybook on a phone, playing the chosen walk-through">
             <img id="g-img" src="guide/story-1.webp" alt="" width="780" height="1688">
             <span class="gring" id="g-ring" hidden></span>
           </div>
           <div class="gwords">
-            <div class="chips" id="g-chips" role="group" aria-label="Walk-throughs"><span class="muted">Loading the walk-throughs</span></div>
             <p class="gstep" id="g-step" aria-live="polite">Step 1</p>
             <p class="gcap" id="g-cap">Loading the walk-through.</p>
             <div class="gctl">
@@ -244,8 +244,11 @@
               <button class="btn-ghost play" type="button" id="g-play" aria-pressed="false">Play</button>
               <button class="btn-ghost arrow" type="button" id="g-next" aria-label="Next step">&#8250;</button>
             </div>
-            <p class="gintro" id="g-intro"></p>
-            <ol class="glist" id="g-list" aria-label="The steps in words"></ol>
+            <details class="gall" id="g-all">
+              <summary>Read all the steps</summary>
+              <p class="gintro" id="g-intro"></p>
+              <ol class="glist" id="g-list" aria-label="The steps in words"></ol>
+            </details>
           </div>
         </div>
       </div>
@@ -463,6 +466,6 @@
     </div>
   </footer>
 
-  <script src="js/site.js?v=15" defer></script>
+  <script src="js/site.js?v=16" defer></script>
 </body>
 </html>
