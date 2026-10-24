@@ -115,7 +115,7 @@
       if (!reduced && auto !== false) play(); else stop();
     };
     var load = function () {
-      return fetch('guide/guide.json?v=18').then(function (r) { if (!r.ok) throw new Error('guide ' + r.status); return r.json(); });
+      return fetch('guide/guide.json?v=19').then(function (r) { if (!r.ok) throw new Error('guide ' + r.status); return r.json(); });
     };
     load().then(function (d) {
       G.data = d;
