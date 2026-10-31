@@ -27,10 +27,11 @@ The public site for My Medical Daybook at **https://mymedicaldaybook.co.uk** (Gi
 ## Checking it
 One site for every screen: the layout rearranges itself with CSS media queries (under 820px the phone layout, 820px and over side by side), never a separate mobile site. The scratchpad's `site/audit.mjs` checks every page at 320, 390, 430, 768, 1024, 1280 and 1440 wide (sideways scroll, anything off the edge, controls under 44px, page errors) and `site/scrollshots.mjs` captures the home page a screenful at a time at phone, tablet and laptop sizes to look at. The scratchpad's `site/site_test.mjs` (Playwright, the site served on a made-up origin, the bridge mocked, Google Fonts through) checks the hero, the demo cards, the guide (twelve topics, the story first, Next and the chips), the reports (one set shown, three Crohn's pages served), the Beta box (empty, wrong, good, bridge down, and a `?beta=` link), 390 light, 320 dark and 1280 wide with axe on every page, no sideways scroll, every control 44px, reduced motion, and no page errors. `site/reports.mjs` remakes the report pictures from the previews.
 
+**mymedicaldaybook.com** (and www) redirects here since 31 October 2026, path and query kept: a proxied placeholder record and one Cloudflare redirect rule on the .com zone, made by the app repository's "The .com redirect" workflow (`tools/com_redirect.mjs`, check, apply or test) with the `CLOUDFLARE_COM_TOKEN` secret, a token limited to the .com.
+
 ## Still to do
 - Mark's review of the look and the message, section by section.
 - Charlene's and Shelley's quotes, once given and approved.
 - Every app link points at https://app.mymedicaldaybook.co.uk/ since 18 October 2026 (the app's v231).
-- mymedicaldaybook.com (in the same Cloudflare account) to redirect here.
 - The App Store and Google Play badges when the app is listed, with Apple's credit line in the footer.
 - Cloudflare Web Analytics (private, no cookies) if Mark wants visitor numbers.
