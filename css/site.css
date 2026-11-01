@@ -329,6 +329,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 6px 22px; }
 footer a { color: var(--on-foot); min-height: 44px; display: inline-flex; align-items: center; }
 footer a:hover { color: #FFFFFF; }
 footer p { color: var(--on-foot-muted); max-width: 70em; }
+footer p a { display: inline; min-height: 0; text-decoration: underline; overflow-wrap: anywhere; }
 footer .co { display: inline-flex; align-items: center; gap: 10px; padding: 6px 14px 6px 8px; border-radius: 999px; background: var(--paper); color: var(--paper-ink); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; width: max-content; }
 footer .co img { height: 28px; width: auto; }
 
