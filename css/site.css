@@ -380,3 +380,13 @@ footer .co img { height: 28px; width: auto; }
   .grid2.circle { grid-template-areas: "text pic" "text quote"; align-items: start; row-gap: 22px; }
   .grid2.circle > .text { align-self: center; }
 }
+
+/* Meet the team (1 November 2026) */
+.team { display: grid; gap: clamp(28px, 4vw, 44px); padding-block: 24px clamp(48px, 7vw, 96px); max-width: 60em; }
+.person { display: grid; gap: 20px 32px; align-items: start; background: var(--solid); border: 1px solid color-mix(in srgb, var(--line) 70%, transparent); border-radius: 22px; padding: clamp(20px, 3vw, 32px); }
+.person img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; display: block; box-shadow: 0 6px 20px rgba(23, 38, 58, .12); }
+.person h2 { font-size: 26px; color: var(--ink); margin: 0; }
+.person .role { color: var(--teal); font-weight: 600; margin: 4px 0 14px; }
+.person p { margin-bottom: 14px; }
+.person p:last-child { margin-bottom: 0; }
+@media (min-width: 720px) { .person { grid-template-columns: 180px 1fr; } .person img { width: 180px; height: 180px; } }
