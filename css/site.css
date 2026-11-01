@@ -390,3 +390,12 @@ footer .co img { height: 28px; width: auto; }
 .person p { margin-bottom: 14px; }
 .person p:last-child { margin-bottom: 0; }
 @media (min-width: 720px) { .person { grid-template-columns: 180px 1fr; } .person img { width: 180px; height: 180px; } }
+
+.aboutus { background: var(--solid); border: 1px solid color-mix(in srgb, var(--line) 70%, transparent); border-radius: 22px; padding: clamp(20px, 3vw, 32px); max-width: 60em; margin-top: 24px; }
+.aboutus h2 { font-size: 26px; color: var(--ink); margin: 0 0 12px; }
+.aboutus > p { margin-bottom: 14px; max-width: 44em; }
+.usrow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 20px; }
+.usrow figure { margin: 0; }
+.usrow img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px; display: block; box-shadow: 0 6px 20px rgba(23, 38, 58, .12); }
+.usrow figcaption { color: var(--slate); font-size: 15px; margin-top: 8px; text-align: center; }
+@media (max-width: 560px) { .usrow { gap: 8px; } .usrow figcaption { font-size: 14px; } }
