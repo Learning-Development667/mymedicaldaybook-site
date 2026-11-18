@@ -399,3 +399,7 @@ footer .co img { height: 28px; width: auto; }
 .usrow img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px; display: block; box-shadow: 0 6px 20px rgba(23, 38, 58, .12); }
 .usrow figcaption { color: var(--slate); font-size: 15px; margin-top: 8px; text-align: center; }
 @media (max-width: 560px) { .usrow { gap: 8px; } .usrow figcaption { font-size: 14px; } }
+
+/* Carmen Kane's quote under The reports (18 November 2026) */
+.quotes.pro { max-width: 46em; margin: 40px auto 0; }
+.quote .by a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
