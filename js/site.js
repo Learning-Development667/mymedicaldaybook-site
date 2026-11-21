@@ -203,6 +203,45 @@
     } catch (e) { /* an old browser without URL: the box still works by hand */ }
   }
 
+  /* Meet the Family: the chip bar marks the part you are reading. */
+  var famLinks = $$('.famnav a');
+  if (famLinks.length && io) {
+    var markFam = function (id) { famLinks.forEach(function (a) { a.setAttribute('aria-current', a.getAttribute('href') === '#' + id ? 'true' : 'false'); }); };
+    var fo = new IntersectionObserver(function (entries) { entries.forEach(function (e) { if (e.isIntersecting) markFam(e.target.id); }); }, { rootMargin: '-45% 0px -50% 0px' });
+    $$('.fam-sec').forEach(function (sec) { fo.observe(sec); });
+  }
+
+  /* Apply to be an advisor or an ambassador: the answers become an email in the person's own email app. Nothing is
+     posted anywhere and nothing is kept by the site. A box left empty is marked where it is, never only at the top. */
+  var TO = 'support@mymedicaldaybook.co.uk';
+  var clearMiss = function (el) { el.classList.remove('is-missing'); el.removeAttribute('aria-invalid'); var m = el.parentNode.querySelector('.miss'); if (m) m.parentNode.removeChild(m); };
+  $$('.applyform').forEach(function (f) {
+    f.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var first = null;
+      $$('[required]', f).forEach(function (el) {
+        clearMiss(el);
+        var v = String(el.value || '').trim();
+        var bad = !v || (el.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
+        if (bad) {
+          el.classList.add('is-missing');
+          el.setAttribute('aria-invalid', 'true');
+          var m = document.createElement('span'); m.className = 'miss'; m.textContent = v ? 'Check this' : 'Missing information';
+          el.parentNode.appendChild(m);
+          if (!first) first = el;
+        }
+      });
+      if (first) { first.focus(); return; }
+      var val = function (n) { var el = f.elements[n]; return el ? String(el.value || '').trim() : ''; };
+      var kind = f.getAttribute('data-kind') === 'advisor' ? 'Board of Advisors' : 'Ambassador';
+      var lines = ['Name: ' + val('name'), 'Email: ' + val('email'), (kind === 'Ambassador' ? 'I am: ' : 'Field: ') + val('field')];
+      if (val('link')) lines.push('LinkedIn or website: ' + val('link'));
+      lines.push('', val('msg'));
+      window.location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(kind + ' application: ' + val('name')) + '&body=' + encodeURIComponent(lines.join('\n'));
+    });
+    $$('input, select, textarea', f).forEach(function (el) { el.addEventListener('input', function () { clearMiss(el); }); el.addEventListener('change', function () { clearMiss(el); }); });
+  });
+
   /* The year in the footer. */
   $$('[data-year]').forEach(function (y) { y.textContent = String(new Date().getFullYear()); });
 })();

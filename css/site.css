@@ -403,3 +403,127 @@ footer .co img { height: 28px; width: auto; }
 /* Carmen Kane's quote under The reports (18 November 2026) */
 .quotes.pro { max-width: 46em; margin: 40px auto 0; }
 .quote .by a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Get the app (21 November 2026): the download call at the natural breaks, and the store buttons. Our own buttons, not
+   the stores' badges: Apple's badge may only point at the App Store, so the iPhone button names TestFlight; the official
+   Google Play and App Store badges replace these at the launch. */
+.getband { position: relative; isolation: isolate; overflow: hidden; display: grid; gap: 22px 40px; align-items: center; padding: clamp(26px, 4vw, 48px); border-radius: 28px; background: linear-gradient(135deg, #135A60 0%, #17263A 100%); color: #FFFFFF; box-shadow: var(--shadow); }
+.getband::before { content: ""; position: absolute; z-index: -1; width: 520px; height: 520px; right: -160px; top: -220px; border-radius: 50%; background: radial-gradient(closest-side, rgba(92, 195, 201, .38), rgba(92, 195, 201, 0)); }
+.getband::after { content: ""; position: absolute; z-index: -1; width: 420px; height: 420px; left: -180px; bottom: -260px; border-radius: 50%; background: radial-gradient(closest-side, rgba(194, 112, 61, .30), rgba(194, 112, 61, 0)); }
+.getband .gb-head { display: grid; grid-template-columns: auto 1fr; gap: 18px 20px; align-items: center; }
+.getband .gb-icon { width: clamp(64px, 9vw, 92px); height: auto; border-radius: 24%; box-shadow: 0 0 0 6px rgba(255, 255, 255, .10), 0 14px 30px rgba(0, 0, 0, .35); animation: gbFloat 5s ease-in-out infinite; }
+@keyframes gbFloat { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-6px) rotate(1deg); } }
+.getband .gb-kicker { font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #9FDDE0; margin: 0 0 6px; }
+.getband h2, .getband .gb-title { color: #FFFFFF; font-family: var(--head); font-weight: 600; font-size: clamp(26px, 3.4vw, 38px); line-height: 1.15; margin: 0; text-wrap: balance; }
+.getband .gb-line { color: #D6E9EB; margin: 10px 0 0; font-size: 18px; max-width: 30em; }
+.stores { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.store { display: inline-grid; grid-template-columns: 30px auto; column-gap: 12px; align-items: center; min-height: 60px; padding: 8px 20px 8px 14px; border-radius: 14px; background: #0A1117; color: #FFFFFF; border: 1px solid rgba(255, 255, 255, .55); text-decoration: none; line-height: 1.15; box-shadow: 0 8px 20px rgba(0, 0, 0, .28); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+.store:hover { color: #FFFFFF; transform: translateY(-2px); border-color: #FFFFFF; box-shadow: 0 12px 26px rgba(0, 0, 0, .34); }
+.store svg { grid-row: span 2; width: 30px; height: 30px; }
+.store small { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; opacity: .9; }
+.store b { font-size: 20px; font-weight: 600; letter-spacing: -.005em; }
+.store.web { background: transparent; border-color: rgba(255, 255, 255, .7); box-shadow: none; }
+.getband .gb-note { color: #D6E9EB; font-size: 15px; margin: 4px 0 0; flex-basis: 100%; }
+.getband .gb-note a { color: #FFFFFF; padding: 0; }
+@media (min-width: 980px) { .getband { grid-template-columns: 1.05fr 1fr; } .getband .stores { justify-content: flex-end; } }
+@media (max-width: 520px) { .getband .gb-head { grid-template-columns: 1fr; } .store { width: 100%; } }
+@media (prefers-reduced-motion: reduce) { .getband .gb-icon { animation: none; } .store { transition: none; } .store:hover { transform: none; } }
+.sec-break { padding-block: clamp(10px, 2vw, 24px) clamp(44px, 6vw, 80px); }
+.sec .getband.inline { margin-top: clamp(48px, 7vw, 88px); }
+
+/* Get Daybook, the section that took the Beta code box's place: three ways in, each with its steps */
+.ways { display: grid; gap: 20px; }
+.way { position: relative; display: grid; gap: 14px; align-content: start; padding: 26px 24px 26px; border-radius: var(--r); background: var(--card); border: 1px solid color-mix(in srgb, var(--line) 80%, transparent); box-shadow: var(--shadow-soft); }
+.way .way-ico { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; background: var(--teal-light); color: var(--teal); }
+.way .way-ico svg { width: 28px; height: 28px; }
+.way h3 { font-size: 24px; }
+.way ol { margin: 0; padding-left: 22px; display: grid; gap: 6px; color: var(--slate); font-size: 17px; }
+.way .store { width: 100%; margin-top: 4px; }
+.way .btn { width: 100%; }
+@media (min-width: 900px) { .ways { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; } }
+.promise-line { display: flex; gap: 14px; align-items: flex-start; margin: 28px auto 0; max-width: 46em; padding: 18px 20px; border-radius: 18px; background: var(--solid); border: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
+.promise-line svg { flex: none; width: 28px; height: 28px; color: var(--warm); margin-top: 2px; }
+.promise-line p { margin: 0; color: var(--ink); }
+
+/* The header: Meet the Family stays on every screen; the button is Get the app */
+.top nav a.navlink.family { font-weight: 600; color: var(--teal); }
+@media (max-width: 860px) { .top nav a.navlink.family { display: inline-flex; } }
+.top nav .family .short { display: none; }
+@media (max-width: 560px) { .top nav .family .long { display: none; } .top nav .family .short { display: inline; } }
+@media (max-width: 360px) { .top nav { gap: 4px 10px; } }
+
+/* Meet the Family (21 November 2026): one page, four parts, a chip bar that stays at the top while you read */
+.fam-hero { position: relative; padding-block: clamp(40px, 7vw, 96px) clamp(24px, 4vw, 40px); text-align: center; }
+.fam-hero h1 { font-size: clamp(40px, 7vw, 76px); line-height: 1.04; letter-spacing: -.01em; text-wrap: balance; }
+.fam-hero h1 em { font-style: normal; color: var(--teal); }
+.fam-hero .lead { margin: 18px auto 0; max-width: 34em; color: var(--slate); font-size: clamp(18px, 2vw, 21px); text-wrap: pretty; }
+.fam-tree { display: flex; justify-content: center; margin: 0 auto 18px; }
+.fam-tree svg { width: clamp(120px, 18vw, 170px); height: auto; color: var(--teal); }
+.fam-tree .leaf { transform-origin: center; animation: leafIn .9s cubic-bezier(.2, .7, .2, 1) both; }
+.fam-tree .leaf:nth-of-type(2) { animation-delay: .15s; } .fam-tree .leaf:nth-of-type(3) { animation-delay: .3s; } .fam-tree .leaf:nth-of-type(4) { animation-delay: .45s; } .fam-tree .leaf:nth-of-type(5) { animation-delay: .6s; }
+@keyframes leafIn { from { opacity: 0; transform: scale(.4); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .fam-tree .leaf { animation: none; } }
+.famnav { position: sticky; top: 72px; z-index: 15; padding-block: 10px; background: color-mix(in srgb, var(--page) 88%, transparent); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid color-mix(in srgb, var(--line) 60%, transparent); }
+.famnav .wrap { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; justify-content: safe center; }
+.famnav .wrap::-webkit-scrollbar { display: none; }
+.famnav a { flex: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--ink); text-decoration: none; font-weight: 600; font-size: 16px; white-space: nowrap; }
+.famnav a .n { font-family: var(--head); color: var(--teal); }
+.famnav a:hover { border-color: var(--teal); color: var(--teal); }
+.famnav a[aria-current="true"] { background: var(--teal-fill); border-color: var(--teal-fill); color: #FFFFFF; }
+.famnav a[aria-current="true"] .n { color: #FFFFFF; }
+.fam-sec { scroll-margin-top: 140px; padding-block: clamp(48px, 7vw, 96px); }
+.fam-sec + .fam-sec { border-top: 1px solid color-mix(in srgb, var(--line) 60%, transparent); }
+.fam-sec .sec-head h2 { font-size: clamp(30px, 4.4vw, 48px); }
+.fam-sec .team { padding-block: 24px 0; }
+.fam-sec .aboutus { margin-top: 0; }
+.seats { display: grid; gap: 22px; align-items: start; }
+.seat { display: grid; gap: 16px; align-content: start; align-self: start; padding: 26px 24px; border-radius: var(--r); background: var(--card); border: 1px solid color-mix(in srgb, var(--line) 80%, transparent); box-shadow: var(--shadow-soft); }
+.seat .mono { width: 96px; height: 96px; border-radius: 50%; display: grid; place-items: center; font-family: var(--head); font-size: 36px; color: #FFFFFF; background: linear-gradient(145deg, #1E7F86, #135A60); box-shadow: 0 0 0 4px var(--surface), 0 0 0 6px #D6AA5A, 0 10px 24px rgba(23, 38, 58, .18); }
+.seat h3 { font-size: 26px; }
+.seat .role { color: var(--teal); font-weight: 600; margin-top: -8px; }
+.seat p { color: var(--slate); font-size: 17px; margin: 0; }
+.seat .more { font-weight: 600; display: inline-flex; align-items: center; min-height: 44px; }
+.seat.open { background: transparent; border: 2px dashed color-mix(in srgb, var(--teal) 45%, var(--line)); box-shadow: none; text-align: center; justify-items: center; }
+.seat.open .mono { background: transparent; color: var(--teal); border: 2px dashed var(--teal); box-shadow: none; }
+.seat.open .mono svg { width: 40px; height: 40px; }
+.seat.open h3 { font-size: 22px; }
+@media (min-width: 760px) { .seats { grid-template-columns: 1.4fr 1fr; } }
+.apply { margin-top: clamp(28px, 4vw, 44px); display: grid; gap: 24px; padding: clamp(22px, 3.4vw, 40px); border-radius: 26px; background: var(--solid); border: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
+.apply h3 { font-size: clamp(24px, 3vw, 30px); }
+.apply .why p { color: var(--slate); }
+.apply .why ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.apply .why li { padding-left: 26px; position: relative; color: var(--ink); }
+.apply .why li::before { content: ""; position: absolute; left: 0; top: .5em; width: 12px; height: 12px; border-radius: 50%; background: var(--warm); }
+.applyform { display: grid; gap: 16px; }
+.applyform label { display: grid; gap: 6px; font-weight: 600; font-size: 16px; }
+.applyform label .opt { font-weight: 400; color: var(--slate); }
+.applyform input, .applyform select, .applyform textarea { font: 17px var(--body); color: var(--ink); background: var(--surface); border: 1.5px solid var(--line); border-radius: 12px; padding: 12px 14px; min-height: 50px; width: 100%; }
+.applyform textarea { min-height: 120px; resize: vertical; }
+.applyform input:focus, .applyform select:focus, .applyform textarea:focus { border-color: var(--teal); outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--teal) 25%, transparent); }
+.applyform .is-missing { border-color: #B0372E; }
+.applyform .miss { color: #B0372E; font-weight: 600; font-size: 15px; }
+@media (prefers-color-scheme: dark) { .applyform .is-missing { border-color: #F0968C; } .applyform .miss { color: #F0968C; } }
+.applyform .hint { color: var(--slate); font-size: 15px; margin: 0; }
+.applyform .btn { justify-self: start; }
+@media (min-width: 900px) { .apply { grid-template-columns: 1fr 1.15fr; align-items: start; } }
+.press { display: grid; gap: 22px; align-items: start; }
+.press .card { padding: 24px; border-radius: var(--r); background: var(--card); border: 1px solid color-mix(in srgb, var(--line) 80%, transparent); box-shadow: var(--shadow-soft); display: grid; gap: 12px; align-content: start; align-self: start; }
+.press .card h3 { font-size: 22px; }
+.press .card p { color: var(--slate); font-size: 17px; margin: 0; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.facts li { padding: 8px 14px; border-radius: 999px; background: var(--teal-light); color: var(--teal); font-weight: 600; font-size: 15px; }
+.kit { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.kit a { display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 6px 4px; text-decoration: none; color: var(--ink); border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
+.kit a:hover { color: var(--teal); }
+.kit img { width: 44px; height: 44px; border-radius: 10px; object-fit: cover; flex: none; }
+.kit span small { display: block; color: var(--slate); font-size: 14px; }
+@media (min-width: 900px) { .press { grid-template-columns: 1.2fr 1fr; } .press .story-card { grid-row: span 2; } }
+.aboutus h3, .person h3 { font-size: 26px; color: var(--ink); margin: 0; }
+.aboutus h3 { margin-bottom: 12px; }
+.apply .why { display: grid; gap: 14px; align-content: start; }
+/* With Meet the Family in the header, a phone keeps the icon and drops the name beside it (the page itself carries the name) */
+header.top .btn { white-space: nowrap; }
+@media (max-width: 440px) { header.top .lockup > span:not(.sr-only) .pre, header.top .lockup > span .name { display: none; } .top nav { gap: 4px 14px; } header.top .btn { padding: 8px 16px; } }
+a.seat { text-decoration: none; color: var(--ink); }
+a.seat:hover { border-color: var(--teal); }
+a.seat .more { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
