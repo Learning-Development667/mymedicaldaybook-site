@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="css/site.css?v=19">
+  <link rel="stylesheet" href="css/site.css?v=20">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mymedicaldaybook.co.uk/#website","url":"https://mymedicaldaybook.co.uk/","name":"My Medical Daybook","alternateName":"Daybook","description":"Your companion between appointments.","inLanguage":"en-GB"},{"@type":"Organization","@id":"https://mymedicaldaybook.co.uk/#org","name":"Mark 1 Apps Ltd","url":"https://mymedicaldaybook.co.uk/","logo":"https://mymedicaldaybook.co.uk/icons/icon-512.png"}]}</script>
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -32,14 +32,14 @@
   <header class="top">
     <div class="wrap">
       <a class="lockup" href="#top">
-        <img src="icons/icon-192.png" alt="" width="44" height="44">
+        <img src="icons/icon-96.png" alt="" width="44" height="44">
         <span><span class="pre">My Medical</span><span class="name">Daybook</span><span class="sr-only">, home</span></span>
       </a>
       <nav aria-label="Site">
         <a class="navlink" href="#does">What it does</a>
         <a class="navlink" href="#guide">See it work</a>
         <a class="navlink" href="#reports">The reports</a>
-        <a class="navlink" href="#try">Try it</a>
+        <a class="navlink keep" href="#try">Try it</a>
         <a class="navlink family" href="family.html"><span class="long">Meet the Family</span><span class="short">Family</span></a>
         <a class="btn" href="#get">Get the app</a>
       </nav>
@@ -59,10 +59,24 @@
       <div class="hero-top hero-in">
         <h1 id="h-open"><span class="hero-pre">My Medical</span><span class="hero-brand">Daybook</span></h1>
         <p class="hero-strap">Your companion between appointments.</p>
-        <img class="hero-icon" src="icons/icon-512.png" alt="" width="120" height="120">
+        <p class="hero-what">A shared health diary for you and the people who help. Log the days between appointments, then take your team a report they can read in a minute.</p>
+        <picture><source type="image/webp" srcset="icons/icon-264.webp"><img class="hero-icon" src="icons/icon-192.png" alt="" width="120" height="120"></picture>
       </div>
-      <a class="hero-band" href="#why"><span class="band-main"><span>See the story.</span> <span>See the app.</span> <span>See if it's for you.</span></span><span class="band-sub">Scroll down for more</span><span class="cue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span></a>
+      <a class="hero-band" href="#why"><span class="band-main"><span>See the story.</span> <span>See the app.</span> <span>See if it's for you.</span></span><span class="cue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span></a>
     </section>
+
+    <!-- A way through for phones, and who it is for, before anything is asked (review, 22 November 2026) -->
+    <nav class="jump" aria-label="Jump to">
+      <div class="wrap">
+        <p class="jump-for">For cancer, Crohn's or colitis, and any long-term condition <span aria-hidden="true">&middot;</span> Records kept in the UK <span aria-hidden="true">&middot;</span> Not medical advice</p>
+        <div class="jump-links">
+          <a href="#does">What it does</a>
+          <a href="#try">Try a demo</a>
+          <a href="#get">Get the app</a>
+          <a href="family.html">Meet the Family</a>
+        </div>
+      </div>
+    </nav>
 
     <!-- 2. Why it exists -->
     <section class="sec solid" id="why" aria-labelledby="h-gap">
@@ -120,7 +134,7 @@
         <figure class="reveal">
           <div class="pic film-walk">
             <img src="media/walk-poster-1280.jpg" srcset="media/walk-poster-1280.jpg 1280w, media/walk-poster-1920.jpg 1920w" sizes="(min-width: 900px) 560px, 100vw" alt="A couple in their late fifties walk arm in arm along a frosty farm track towards a lone oak tree at sunrise." width="1280" height="720" loading="lazy">
-            <video class="walk" muted playsinline preload="none" aria-hidden="true" tabindex="-1" data-src-1280="media/walk-1280.mp4" data-src-1920="media/walk-1920.mp4" data-webm="media/walk-1280.webm"></video>
+            <video class="walk" muted playsinline preload="none" aria-hidden="true" tabindex="-1" data-src-720="media/walk-720.mp4" data-src-1280="media/walk-1280.mp4"></video>
           </div>
         </figure>
         <div class="text reveal d1">
@@ -135,7 +149,7 @@
       <div class="wrap grid2 flip shelley">
         <div class="text reveal">
           <p class="kicker">Then Helen asked</p>
-          <h2 id="h-helen">This could be life changing.</h2>
+          <h2 id="h-helen">&ldquo;This could be life changing.&rdquo;</h2>
           <blockquote class="quote">
             <p>I was round Mark's when he showed me the Daybook he'd created to help him keep track of his cancer. I was blown away. I have Crohn's disease, and straight away I asked whether it could work for that too.</p>
             <p>Before Daybook, I'd get myself in a right old pickle trying to remember everything, then come home from an appointment and think, "Oh, I should have asked that."</p>
@@ -153,8 +167,8 @@
           </div>
         </figure>
       </div>
-      <!-- Get the app, at the end of the story (21 November 2026) -->
-      <div class="wrap"><div class="getband reveal inline" role="region" aria-labelledby="gb-1"><div class="gb-head"><img class="gb-icon" src="icons/icon-192.png" alt="" width="92" height="92"><div><p class="gb-kicker">Start your own</p><p class="gb-title" id="gb-1">Your Daybook, a tap away.</p><p class="gb-line">Set it up in a few minutes. Invite the people who help when you are ready.</p></div></div><div class="stores"><a class="store" href="https://play.google.com/store/apps/details?id=uk.co.mark1apps.daybook" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9.5v7.5a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5V9.5z"/><path d="M5 9.5a7 7 0 0 1 14 0"/><path d="M8.5 5l-1.5-2.2M15.5 5l1.5-2.2"/><circle cx="9.5" cy="7.2" r=".7" fill="currentColor"/><circle cx="14.5" cy="7.2" r=".7" fill="currentColor"/><path d="M9 18.5v2.5M15 18.5v2.5"/></svg><small>Android · open Beta</small><b>Google Play</b></a><a class="store" href="https://testflight.apple.com/join/4gUcyMJW" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2" width="11" height="20" rx="2.8"/><path d="M10.5 4.6h3"/><path d="M10.8 19h2.4"/></svg><small>iPhone · Beta on</small><b>TestFlight</b></a><a class="store web" href="https://app.mymedicaldaybook.co.uk/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><small>Any device</small><b>In your browser</b></a></div></div></div>
+      <!-- After the story: a quiet way on, not a second pitch (review, 22 November 2026) -->
+      <div class="wrap"><p class="softcta reveal">Want to see it for yourself? <a href="#try">Try a demo, no account needed</a> or <a href="#get">get the app</a>.</p></div>
     </section>
 
     <!-- 4. What it does, between appointments -->
@@ -174,7 +188,7 @@
           <article class="feat reveal d1">
             <div class="shot"><img src="guide/reading-1.webp" alt="Today in Daybook: the day's check-ins, then nine tiles, Vitals, Pain, Drink, Food, Note, Sleep, Bowels, Symptom and Medicine." width="780" height="1688" loading="lazy"></div>
             <h3>Log anything in a few taps</h3>
-            <p>Vitals, pain, a drink, a meal, a note, sleep, bowels, a symptom, a dose: nine tiles on Today, each a few taps, with the time filled in for you.</p>
+            <p>Vitals, pain, a drink, a meal, a note, sleep, bowels, a symptom, a dose: nine buttons on the first screen, each a few taps, with the time filled in for you.</p>
           </article>
           <article class="feat reveal d2">
             <div class="shot"><img src="guide/meds-1.webp" alt="The Meds tab: each medicine as a card with its name, how many doses are done today, and a Log now button." width="780" height="1688" loading="lazy"></div>
@@ -212,11 +226,11 @@
           </div>
           <div class="it">
             <svg viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6c-7 8-11 13-11 19a11 11 0 0 0 22 0c0-6-4-11-11-19z"/><path d="M17 27a5 5 0 0 0 5 5"/></svg>
-            <div><b>Crohn's or colitis</b><p>Bowels with blood and urgency, a flare plan in the team's own words, "I think I'm flaring" with a 7-day summary to read out, results as the lab gave them, injections and steroid courses on the calendar.</p></div>
+            <div><b>Crohn's or colitis</b><p>Bowels with blood and urgency, a flare plan in the team's own words, "I think I'm flaring" with the last week summed up to read out on the phone, results as the lab gave them, injections and steroid courses on the calendar.</p></div>
           </div>
           <div class="it">
             <svg viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="10" width="30" height="27" rx="4"/><path d="M7 18h30M15 6v8M29 6v8"/><circle cx="22" cy="28" r="3"/></svg>
-            <div><b>Cancer treatment</b><p>Cycles as the team counts them, sessions marked done, side effects asked in the check-ins for three days after each one, and the alert card's limits on every temperature.</p></div>
+            <div><b>Cancer treatment</b><p>Your treatment cycles on a calendar, sessions marked done, side effects asked about for three days after each one, and every temperature shown against the limits on your hospital's alert card.</p></div>
           </div>
           <div class="it">
             <svg viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="22" r="15"/><path d="M22 15v14M15 22h14"/></svg>
@@ -224,7 +238,7 @@
           </div>
           <div class="it">
             <svg viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="6"/><circle cx="30" cy="18" r="5"/><path d="M5 36a11 11 0 0 1 22 0M24 36a9 9 0 0 1 15-6"/></svg>
-            <div><b>Your care circle</b><p>Invite the people who help. They see what you see, from their own phone. A carer adds their own view of the day and the week, kept apart from yours, never mixed in.</p></div>
+            <div><b>Your care circle</b><p>Your care circle is you and the people you choose. Invite the people who help. They see what you see, from their own phone. A carer adds their own view of the day and the week, kept apart from yours, never mixed in.</p></div>
           </div>
         </div>
       </div>
@@ -245,8 +259,8 @@
             <span class="gring" id="g-ring" hidden></span>
           </div>
           <div class="gwords">
-            <p class="gstep" id="g-step" aria-live="polite">Step 1</p>
-            <p class="gcap" id="g-cap">Loading the walk-through.</p>
+            <p class="gstep" id="g-step">Step 1</p>
+            <p class="gcap" id="g-cap" aria-live="polite">Loading the walk-through.</p>
             <div class="gctl">
               <button class="btn-ghost arrow" type="button" id="g-prev" aria-label="Previous step">&#8249;</button>
               <button class="btn-ghost play" type="button" id="g-play" aria-pressed="false">Play</button>
@@ -278,27 +292,28 @@
           <button class="chip" type="button" data-report="mood" aria-pressed="false">Mood and wellbeing</button>
         </div>
         <figure class="pages" data-report="notes" data-n="2" data-cap="Notes for the team: two pages for the nurse or doctor. The week at a glance, the questions with room for the answers, the charts, and the week's notes in the patient's own words.">
-          <div class="page"><picture><source type="image/webp" srcset="media/report-notes-1.webp"><img src="media/report-notes-1.jpg" alt="Notes for the team, page 1: eight tiles with the week's temperature, heart rate, blood pressure, oxygen, pain, sleep, protein and mood, the when-needed medicines, the questions, and a table of the three days after treatment." width="1000" height="1415" loading="lazy"></picture></div>
-          <div class="page"><picture><source type="image/webp" srcset="media/report-notes-2.webp"><img src="media/report-notes-2.jpg" alt="Notes for the team, page 2: small charts of the week's readings, each with its own key." width="1000" height="1416" loading="lazy"></picture></div>
+          <div class="page"><a class="page-open" href="media/report-notes-1.jpg" aria-label="Open this page full size: Notes for the team, page 1"><picture><source type="image/webp" srcset="media/report-notes-1.webp"><img src="media/report-notes-1.jpg" alt="Notes for the team, page 1: eight tiles with the week's temperature, heart rate, blood pressure, oxygen, pain, sleep, protein and mood, the when-needed medicines, the questions, and a table of the three days after treatment." width="1000" height="1415" loading="lazy"></picture></a></div>
+          <div class="page"><a class="page-open" href="media/report-notes-2.jpg" aria-label="Open this page full size: Notes for the team, page 2"><picture><source type="image/webp" srcset="media/report-notes-2.webp"><img src="media/report-notes-2.jpg" alt="Notes for the team, page 2: small charts of the week's readings, each with its own key." width="1000" height="1416" loading="lazy"></picture></a></div>
         </figure>
         <figure class="pages" data-report="ibd" data-n="3" data-cap="Crohn's and colitis: bowels, blood and urgency against the person's own usual, flare days and calls to the advice line, injections and steroid courses, results exactly as the lab gave them, and the questions for the gastro team." hidden>
-          <div class="page"><picture><source type="image/webp" srcset="media/report-ibd-1.webp"><img src="media/report-ibd-1.jpg" alt="The Crohn's and colitis report, page 1: tiles for bowels a day, blood, urgency and flare days, four charts, the treatment, the flare plan and the results as given." width="1000" height="1416" loading="lazy"></picture></div>
-          <div class="page"><picture><source type="image/webp" srcset="media/report-ibd-2.webp"><img src="media/report-ibd-2.jpg" alt="Page 2: the month week by week, the flare log, the questions outside the gut, every result with its range, and the questions for the gastro team." width="1000" height="1414" loading="lazy"></picture></div>
-          <div class="page"><picture><source type="image/webp" srcset="media/report-ibd-3.webp"><img src="media/report-ibd-3.jpg" alt="Page 3: a ruled panel for the notes from the appointment." width="1000" height="1414" loading="lazy"></picture></div>
+          <div class="page"><a class="page-open" href="media/report-ibd-1.jpg" aria-label="Open this page full size: The Crohn's and colitis report, page 1"><picture><source type="image/webp" srcset="media/report-ibd-1.webp"><img src="media/report-ibd-1.jpg" alt="The Crohn's and colitis report, page 1: tiles for bowels a day, blood, urgency and flare days, four charts, the treatment, the flare plan and the results as given." width="1000" height="1416" loading="lazy"></picture></a></div>
+          <div class="page"><a class="page-open" href="media/report-ibd-2.jpg" aria-label="Open this page full size: Page 2"><picture><source type="image/webp" srcset="media/report-ibd-2.webp"><img src="media/report-ibd-2.jpg" alt="Page 2: the month week by week, the flare log, the questions outside the gut, every result with its range, and the questions for the gastro team." width="1000" height="1414" loading="lazy"></picture></a></div>
+          <div class="page"><a class="page-open" href="media/report-ibd-3.jpg" aria-label="Open this page full size: Page 3"><picture><source type="image/webp" srcset="media/report-ibd-3.webp"><img src="media/report-ibd-3.jpg" alt="Page 3: a ruled panel for the notes from the appointment." width="1000" height="1414" loading="lazy"></picture></a></div>
         </figure>
         <figure class="pages" data-report="pain" data-n="2" data-cap="Pain and pain relief, for the pain nurse: the morning and evening check-in scores, the worst pain and pain between check-ins, key points in the patient's own words, every dose of pain relief and when the top-ups were taken, and nights broken by pain." hidden>
-          <div class="page"><picture><source type="image/webp" srcset="media/report-pain-1.webp"><img src="media/report-pain-1.jpg" alt="The Pain and pain relief report, page 1: four tiles, six small charts of the check-in scores, the doses and the sleep, and key points from the scores and in the patient's own words." width="1000" height="1415" loading="lazy"></picture></div>
-          <div class="page"><picture><source type="image/webp" srcset="media/report-pain-2.webp"><img src="media/report-pain-2.jpg" alt="Page 2: the pain relief table, when the top-up doses were taken across the day, nights broken by pain, week by week, and a question for the pain team." width="1000" height="1416" loading="lazy"></picture></div>
+          <div class="page"><a class="page-open" href="media/report-pain-1.jpg" aria-label="Open this page full size: The Pain and pain relief report, page 1"><picture><source type="image/webp" srcset="media/report-pain-1.webp"><img src="media/report-pain-1.jpg" alt="The Pain and pain relief report, page 1: four tiles, six small charts of the check-in scores, the doses and the sleep, and key points from the scores and in the patient's own words." width="1000" height="1415" loading="lazy"></picture></a></div>
+          <div class="page"><a class="page-open" href="media/report-pain-2.jpg" aria-label="Open this page full size: Page 2"><picture><source type="image/webp" srcset="media/report-pain-2.webp"><img src="media/report-pain-2.jpg" alt="Page 2: the pain relief table, when the top-up doses were taken across the day, nights broken by pain, week by week, and a question for the pain team." width="1000" height="1416" loading="lazy"></picture></a></div>
         </figure>
         <figure class="pages" data-report="food" data-n="2" data-cap="The Food diary, for the dietitian: what was eaten and drunk each day, protein against the target, the food groups that came up, and points to discuss, with room for the dietitian's notes." hidden>
-          <div class="page"><picture><source type="image/webp" srcset="media/report-food-1.webp"><img src="media/report-food-1.jpg" alt="The Food diary report, page 1: the protein banner, four tiles, a protein chart with the target line, the food group grid, the drinks chart and points to discuss." width="1000" height="1416" loading="lazy"></picture></div>
-          <div class="page"><picture><source type="image/webp" srcset="media/report-food-2.webp"><img src="media/report-food-2.jpg" alt="Page 2: the energy and macro charts, and two week cards with a line for each day's meals." width="1000" height="1414" loading="lazy"></picture></div>
+          <div class="page"><a class="page-open" href="media/report-food-1.jpg" aria-label="Open this page full size: The Food diary report, page 1"><picture><source type="image/webp" srcset="media/report-food-1.webp"><img src="media/report-food-1.jpg" alt="The Food diary report, page 1: the protein banner, four tiles, a protein chart with the target line, the food group grid, the drinks chart and points to discuss." width="1000" height="1416" loading="lazy"></picture></a></div>
+          <div class="page"><a class="page-open" href="media/report-food-2.jpg" aria-label="Open this page full size: Page 2"><picture><source type="image/webp" srcset="media/report-food-2.webp"><img src="media/report-food-2.jpg" alt="Page 2: the energy and macro charts, and two week cards with a line for each day's meals." width="1000" height="1414" loading="lazy"></picture></a></div>
         </figure>
         <figure class="pages" data-report="mood" data-n="2" data-cap="Mood and wellbeing, for the therapist or GP: the best and hardest days and why, mood with pain and sleep behind it, the period in brief, and the weekly check in the person's own words. The raw notes are never printed." hidden>
-          <div class="page"><picture><source type="image/webp" srcset="media/report-mood-1.webp"><img src="media/report-mood-1.jpg" alt="The Mood and wellbeing report, page 1: four tiles, one chart of mood with pain and sleep behind it, the period in brief and quotes in the person's own words." width="1000" height="1416" loading="lazy"></picture></div>
-          <div class="page"><picture><source type="image/webp" srcset="media/report-mood-2.webp"><img src="media/report-mood-2.jpg" alt="Page 2: what helped and what was hardest, week by week, and the questions for the session." width="1000" height="1414" loading="lazy"></picture></div>
+          <div class="page"><a class="page-open" href="media/report-mood-1.jpg" aria-label="Open this page full size: The Mood and wellbeing report, page 1"><picture><source type="image/webp" srcset="media/report-mood-1.webp"><img src="media/report-mood-1.jpg" alt="The Mood and wellbeing report, page 1: four tiles, one chart of mood with pain and sleep behind it, the period in brief and quotes in the person's own words." width="1000" height="1416" loading="lazy"></picture></a></div>
+          <div class="page"><a class="page-open" href="media/report-mood-2.jpg" aria-label="Open this page full size: Page 2"><picture><source type="image/webp" srcset="media/report-mood-2.webp"><img src="media/report-mood-2.jpg" alt="Page 2: what helped and what was hardest, week by week, and the questions for the session." width="1000" height="1414" loading="lazy"></picture></a></div>
         </figure>
-        <p class="rcap" id="r-cap"></p>
+        <p class="rcap" id="r-cap" aria-live="polite"></p>
+        <p class="rtap">Tap a page to see it full size.</p>
         <div class="grid2 rholds">
           <div class="text reveal">
             <h3>Every report says where it came from</h3>
@@ -319,6 +334,16 @@
             </div>
           </figure>
         </div>
+        <!-- For the people who receive the reports (review, 22 November 2026) -->
+        <div class="forteam reveal" id="clinicians">
+          <h3>For nurses, doctors and therapists</h3>
+          <ul>
+            <li><b>What reaches you:</b> two or three pages, by email from your patient or on paper. Nothing to install or sign in to.</li>
+            <li><b>What is on them:</b> facts as logged and the patient's own words, never advice or interpretation.</li>
+            <li><b>What comes first:</b> their questions for you, with room to write the answers.</li>
+          </ul>
+          <p><a href="media/report-notes-1.jpg">See an example page</a>, made with made-up details.</p>
+        </div>
         <!-- Carmen Kane's own words, given 17 November 2026; "cancer" taken out of the last sentence with her agreement (Mark, 18 November 2026) -->
         <div class="quotes pro reveal">
           <blockquote class="quote">
@@ -328,7 +353,7 @@
           </blockquote>
         </div>
         <!-- Get the app, after the reports (21 November 2026) -->
-        <div class="getband reveal inline" role="region" aria-labelledby="gb-2"><div class="gb-head"><img class="gb-icon" src="icons/icon-192.png" alt="" width="92" height="92"><div><p class="gb-kicker">Before your next appointment</p><p class="gb-title" id="gb-2">Take your first report with you.</p><p class="gb-line">Log the days in between, then print it or send it to your team from the app.</p></div></div><div class="stores"><a class="store" href="https://play.google.com/store/apps/details?id=uk.co.mark1apps.daybook" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9.5v7.5a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5V9.5z"/><path d="M5 9.5a7 7 0 0 1 14 0"/><path d="M8.5 5l-1.5-2.2M15.5 5l1.5-2.2"/><circle cx="9.5" cy="7.2" r=".7" fill="currentColor"/><circle cx="14.5" cy="7.2" r=".7" fill="currentColor"/><path d="M9 18.5v2.5M15 18.5v2.5"/></svg><small>Android · open Beta</small><b>Google Play</b></a><a class="store" href="https://testflight.apple.com/join/4gUcyMJW" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2" width="11" height="20" rx="2.8"/><path d="M10.5 4.6h3"/><path d="M10.8 19h2.4"/></svg><small>iPhone · Beta on</small><b>TestFlight</b></a><a class="store web" href="https://app.mymedicaldaybook.co.uk/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><small>Any device</small><b>In your browser</b></a></div></div>
+        <div class="getband reveal inline" role="region" aria-labelledby="gb-2"><div class="gb-head"><img class="gb-icon" src="icons/icon-264.webp" alt="" width="92" height="92"><div><p class="gb-kicker">Before your next appointment</p><h3 class="gb-title" id="gb-2">Take your first report with you.</h3><p class="gb-line">Log the days in between, then print it or send it to your team from the app.</p></div></div><div class="stores"><a class="store" href="https://play.google.com/store/apps/details?id=uk.co.mark1apps.daybook" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9.5v7.5a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5V9.5z"/><path d="M5 9.5a7 7 0 0 1 14 0"/><path d="M8.5 5l-1.5-2.2M15.5 5l1.5-2.2"/><circle cx="9.5" cy="7.2" r=".7" fill="currentColor"/><circle cx="14.5" cy="7.2" r=".7" fill="currentColor"/><path d="M9 18.5v2.5M15 18.5v2.5"/></svg><small>Android · open Beta</small><b>Google Play</b></a><a class="store" href="https://testflight.apple.com/join/4gUcyMJW" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2" width="11" height="20" rx="2.8"/><path d="M10.5 4.6h3"/><path d="M10.8 19h2.4"/></svg><small>iPhone · Beta on</small><b>TestFlight</b></a><a class="store web" href="https://app.mymedicaldaybook.co.uk/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><small>Any device</small><b>In your browser</b></a></div><p class="gb-note"><a href="#try">Or try a demo first, no account needed</a></p></div>
       </div>
     </section>
 
@@ -347,7 +372,7 @@
           <p class="kicker">The people around you</p>
           <h2 id="h-circle">Your circle sees what you see. Nobody has to ask twice.</h2>
           <p>Invite the people who help: a partner, a daughter, a friend who drives you to chemo. They see the same record and the same report, from their own phone. The ones who want to know can keep up without you having to repeat it, and the ones you'd rather talk to about anything else can.</p>
-          <p>The circle is yours. Only you, or whoever set it up for you, can invite or remove anyone, and nobody outside it, Mark included, ever looks.</p>
+          <p>The circle is yours. Only you, or whoever set it up for you, can invite or remove anyone, and nobody outside it sees your records. Mark never looks at them.</p>
         </div>
         <div class="quotes reveal d2">
           <blockquote class="quote">
@@ -397,7 +422,7 @@
         <div class="sec-head centre reveal">
           <p class="kicker">Get Daybook</p>
           <h2 id="h-get">On your phone in a few minutes.</h2>
-          <p class="lead">Daybook is in its Beta until it reaches the App Store and Google Play. Everyone is welcome, no code needed, and Mark reads every message himself.</p>
+          <p class="lead">Daybook is in its Beta until it reaches the App Store and Google Play. Everyone is welcome, no code needed, and Mark and Shelley read every message.</p>
         </div>
         <div class="ways">
           <div class="way reveal">
@@ -419,9 +444,10 @@
             <a class="btn" href="https://app.mymedicaldaybook.co.uk/">Open Daybook</a>
           </div>
         </div>
+        <p class="tfnote">TestFlight is Apple's own app for trying apps before they reach the App Store. It comes from Apple and takes a minute to install.</p>
         <div class="promise-line reveal">
           <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-9.3-9.2C1.4 8.4 3.6 5 7 5c2 0 3.6 1.2 5 3 1.4-1.8 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8C19.5 16.4 12 21 12 21z"/></svg>
-          <p><b>The Beta promise.</b> Daybook is free throughout the Beta, and Beta circles keep the full app free for a year after it reaches the App Store, with everything they have logged. Joining someone's circle? Ask them for an invite from the app.</p>
+          <p><b>Everything you log is yours.</b> It stays with you when Daybook reaches the App Store and Google Play. Joining someone's care circle? Ask them to invite you from the app: their invite brings you straight in.</p>
         </div>
       </div>
     </section>
@@ -441,13 +467,14 @@
           </div>
           <div class="promise">
             <svg viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 24V11a3 3 0 0 1 6 0v10"/><path d="M24 21a3 3 0 0 1 6 0v3a3 3 0 0 1 6 0v6a9 9 0 0 1-9 9h-3a9 9 0 0 1-8-5l-5-9a3 3 0 0 1 5-3l2 3"/></svg>
-            <div><b>Nothing leaves without a tap.</b><p>A report goes to the team only when you send it. The AI helper reads a letter only when you ask it to, and keeps nothing.</p></div>
+            <div><b>Nothing leaves without a tap.</b><p>A report goes to the team only when you send it. Daybook Assistant, the AI helper, sees something only when you tap its button. It runs on Claude by Anthropic in the US, as the privacy policy explains.</p></div>
           </div>
           <div class="promise">
             <svg viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="22" r="13"/><path d="M22 19v9"/><circle cx="22" cy="15" r="1.2" fill="currentColor"/></svg>
-            <div><b>Not medical advice.</b><p>Daybook keeps the record and does the sums. Your team makes the decisions. In an emergency, call 999 or 111.</p></div>
+            <div><b>Not medical advice.</b><p>Daybook keeps the record and does the sums. Your team makes the decisions. Daybook is independent, not an NHS service, and its reports work for any NHS or private team. In an emergency, call 999 or 111.</p></div>
           </div>
         </div>
+        <p class="keepline"><b>Yours to keep.</b> Daybook is run by Mark 1 Apps Ltd, a family company with two directors, and you can download everything you have logged at any time.</p>
         <p style="margin-top: 28px"><a href="privacy.html">Read the privacy policy</a>, written in plain English.</p>
       </div>
     </section>
@@ -457,12 +484,12 @@
       <div class="wrap grid2">
         <div class="text reveal">
           <h2 id="h-close">Less to remember. More to say.</h2>
-          <p class="lead">Set it up in a few minutes on an iPhone, iPad, Mac or Android phone, and invite your circle when you're ready.</p>
+          <p class="lead">Set it up in a few minutes on a phone, tablet or computer, and invite your care circle when you're ready.</p>
           <div class="ctas">
             <a class="btn" href="#get">Get the app</a>
             <a class="btn-ghost" href="#try">Try the demo first</a>
           </div>
-          <p class="muted">Questions first? Email <a href="mailto:support@mymedicaldaybook.co.uk">support@mymedicaldaybook.co.uk</a> and Mark will answer himself.</p>
+          <p class="muted">Questions first? Email <a href="mailto:support@mymedicaldaybook.co.uk">support@mymedicaldaybook.co.uk</a> and Mark or Shelley will answer.</p>
         </div>
         <figure class="reveal d1">
           <div class="pic parallax">
@@ -480,17 +507,17 @@
   <footer>
     <div class="wrap">
       <a class="lockup" href="#top">
-        <img src="icons/icon-192.png" alt="" width="44" height="44">
+        <img src="icons/icon-96.png" alt="" width="44" height="44">
         <span><span class="pre">My Medical</span><span class="name">Daybook</span><span class="sr-only">, back to the top</span></span>
       </a>
       <nav aria-label="Legal and support"><a href="privacy.html">Privacy</a><a href="terms.html">Terms of use</a><a href="support.html">Support</a><a href="family.html">Meet the Family</a><a href="index.html#get">Get the app</a></nav>
-      <span class="co"><img src="icons/mark1apps-line.png" alt="" width="32" height="28">Made by Mark 1 Apps Ltd</span>
+      <span class="co"><img src="icons/mark1apps-line-64.png" alt="" width="32" height="28" loading="lazy">Made by Mark 1 Apps Ltd</span>
       <p>Copyright <span data-year>2026</span> Mark 1 Apps Ltd. All rights reserved. Mark 1 Apps Ltd is a company registered in England and Wales, number 17510025. Registered office: 71-75 Shelton Street, London WC2H 9JQ.</p>
       <p>Registered with the Information Commissioner's Office, number ZC275185. Contact: <a href="mailto:support@mymedicaldaybook.co.uk">support@mymedicaldaybook.co.uk</a>.</p>
       <p>Daybook is not a medical device and gives no medical advice. In an emergency call 999; for urgent advice call 111.</p>
     </div>
   </footer>
 
-  <script src="js/site.js?v=43" defer></script>
+  <script src="js/site.js?v=44" defer></script>
 </body>
 </html>

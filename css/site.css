@@ -527,3 +527,72 @@ header.top .btn { white-space: nowrap; }
 a.seat { text-decoration: none; color: var(--ink); }
 a.seat:hover { border-color: var(--teal); }
 a.seat .more { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+
+/* The website review (22 November 2026, Mark: "do the rest of the recommendations", money left out) */
+/* the first screen says what Daybook is */
+.hero-what { margin: 12px auto 0; max-width: 30em; font-size: clamp(16px, 1.9vw, 19px); line-height: 1.45; color: var(--paper-ink); text-shadow: 0 0 6px var(--paper), 0 0 14px var(--paper), 0 0 24px var(--paper); text-wrap: balance; }
+.hero-pre { color: #135A60; }
+/* a way through on a phone, and who it is for, before anything is asked */
+.jump { background: var(--solid); border-bottom: 1px solid color-mix(in srgb, var(--line) 60%, transparent); padding-block: 14px 16px; }
+.jump .wrap { display: grid; gap: 10px; justify-items: center; text-align: center; }
+.jump-for { color: var(--slate); font-size: 16px; margin: 0; text-wrap: balance; }
+.jump-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.jump-links a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--card); color: var(--ink); font-weight: 600; font-size: 16px; text-decoration: none; }
+.jump-links a:hover { border-color: var(--teal); color: var(--teal); }
+.softcta { margin: clamp(32px, 5vw, 56px) auto 0; text-align: center; font-size: 19px; color: var(--ink); max-width: 36em; }
+.softcta a { font-weight: 600; }
+/* the reports: a page opens full size; a part for clinicians */
+.page-open { display: block; height: 100%; }
+.rtap { text-align: center; color: var(--slate); font-size: 16px; margin: -6px 0 0; }
+.forteam { margin: clamp(32px, 5vw, 48px) auto 0; max-width: 46em; padding: clamp(20px, 3vw, 30px); border-radius: var(--r); background: var(--card); border: 1px solid color-mix(in srgb, var(--line) 80%, transparent); box-shadow: var(--shadow-soft); display: grid; gap: 12px; }
+.forteam h3 { font-size: clamp(22px, 2.6vw, 26px); }
+.forteam ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.forteam li { padding-left: 26px; position: relative; }
+.forteam li::before { content: ""; position: absolute; left: 0; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--teal-fill); }
+.forteam p { margin: 0; }
+/* Get Daybook */
+.tfnote { text-align: center; color: var(--slate); font-size: 16px; margin: 18px auto 0; max-width: 40em; }
+.keepline { margin-top: 24px; color: var(--on-band-muted); }
+.keepline b { color: var(--on-band); }
+/* Meet the Family */
+.fam-photos { display: flex; justify-content: center; margin: 0 auto 18px; }
+.fam-photos img { width: clamp(64px, 9vw, 88px); height: clamp(64px, 9vw, 88px); border-radius: 50%; object-fit: cover; border: 3px solid var(--surface); box-shadow: 0 6px 16px rgba(23, 38, 58, .16); margin-left: -14px; }
+.fam-photos picture:first-child img { margin-left: 0; }
+.more-bio summary { display: inline-flex; align-items: center; min-height: 44px; color: var(--teal); font-weight: 600; cursor: pointer; }
+.more-bio[open] summary { margin-bottom: 8px; }
+.seats.one { grid-template-columns: minmax(0, 46em); }
+.joinline { color: var(--ink) !important; font-weight: 600; }
+.applydone { display: grid; gap: 10px; padding: 14px; border-radius: 14px; background: var(--teal-light); }
+.applydone p { margin: 0; color: var(--ink); }
+.applydone .btn-ghost { justify-self: start; }
+/* the header: Try it stays on a phone, Meet the Family from 861px; the name shows from 361px */
+@media (max-width: 860px) { .top nav a.navlink.keep { display: inline-flex; } .top nav a.navlink.family { display: none; } }
+@media (max-width: 440px) and (min-width: 361px) { header.top .lockup > span .name { display: block; } }
+/* motion that rests (WCAG 2.2.2): the cue, its ring, the glass sweep and the guide's ring run three times, the band icon is still */
+.hero-band .cue, .hero-band .cue::before { animation-iteration-count: 3; }
+.hero-band::after { animation-iteration-count: 2; }
+.gring { animation-iteration-count: 3; }
+.getband .gb-icon { animation: none; }
+/* contrast and text size */
+@media (prefers-color-scheme: dark) { :root { --btn-fill: linear-gradient(180deg, #1E7F86, #135A60); } }
+.getband .gb-kicker { color: #B8E6E8; font-size: 14px; }
+.store small { font-size: 13px; text-transform: none; letter-spacing: .01em; }
+.kicker { font-size: 14px; }
+.also .it p { font-size: 17px; }
+footer { font-size: 16px; }
+.applyform input, .applyform select, .applyform textarea { border-color: var(--muted); }
+.applyform input:focus, .applyform select:focus, .applyform textarea:focus { outline: 2px solid var(--teal); outline-offset: 1px; }
+.sec .muted a { display: inline-block; min-height: 44px; line-height: 44px; }
+/* nothing hides under the sticky bars */
+html { scroll-padding-top: 96px; }
+html:has(.famnav) { scroll-padding-top: 160px; }
+@media (max-height: 500px) { .top, .famnav { position: static; } html, html:has(.famnav) { scroll-padding-top: 0; } }
+/* the story's picture sits at the top beside the words on a wide screen */
+@media (min-width: 900px) { #why .grid2 { align-items: start; } }
+/* on a phone, body text reads from the left */
+@media (max-width: 819px) { .sec-head.centre { text-align: left; } .sec-head.centre .lead { margin-inline: 0; } .softcta, .tfnote { text-align: left; } }
+/* the guide's phone a little larger on a phone: smaller arrows beside it */
+@media (max-width: 819px) {
+  .guide .gctl .arrow { width: 44px; height: 44px; min-height: 44px; font-size: 22px; }
+  .gphone { width: min(330px, calc(100vw - 2 * var(--gutter) - 104px), max(230px, calc((100svh - 240px) * 390 / 844))); }
+}

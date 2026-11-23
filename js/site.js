@@ -15,22 +15,27 @@
   if (clip && !reduced) {
     clip.addEventListener('playing', function () { hero.classList.add('playing'); }, { once: true });
     var go = function () { var p = clip.play(); if (p && p.catch) { p.catch(function () { /* the still stays */ }); } };
-    clip.load();
-    go();
+    /* (review, 22 November 2026) the clip waits for the page to finish loading, and is left out on Save-Data or a slow
+       connection: the poster already carries the moment */
+    var slow = navigator.connection && (navigator.connection.saveData || /(^|-)2g|3g/.test(navigator.connection.effectiveType || ''));
+    var start = function () { if (slow) return; clip.load(); go(); };
+    if (document.readyState === 'complete') start(); else window.addEventListener('load', start, { once: true });
   }
 
-  /* The walk film in the story: plays over its poster, loops, pauses out of view. */
+  /* The walk film in the story: plays once over its poster and rests on its last frame (Mark, 23 November 2026: stop the
+     loop; WCAG 2.2.2), pauses out of view. A phone gets the 720 film (about 0.4 MB); never the 1920, the frame is at most
+     560px wide. Left out on Save-Data or a slow connection. */
   var walkWrap = $('.pic.film-walk');
   var walk = walkWrap && walkWrap.querySelector('video');
   if (walk && !reduced) {
-    var wide = window.innerWidth >= 1400;
-    var src = walk.getAttribute('data-src-' + (wide ? '1920' : '1280')) || walk.getAttribute('data-src-1280');
-    var webm = walk.getAttribute('data-webm');
-    if (webm && walk.canPlayType('video/webm') && !wide) { var s1 = document.createElement('source'); s1.src = webm; s1.type = 'video/webm'; walk.appendChild(s1); }
+    var small = Math.min(window.innerWidth, 900) * (window.devicePixelRatio || 1) <= 1500 && window.innerWidth < 900;
+    var src = walk.getAttribute(small ? 'data-src-720' : 'data-src-1280') || walk.getAttribute('data-src-1280');
     var s2 = document.createElement('source'); s2.src = src; s2.type = 'video/mp4'; walk.appendChild(s2);
-    walk.loop = true;
+    walk.loop = false;
+    var walkSlow = navigator.connection && (navigator.connection.saveData || /(^|-)2g|3g/.test(navigator.connection.effectiveType || ''));
+    walk.addEventListener('ended', function () { walk.setAttribute('data-done', '1'); });
     walk.addEventListener('playing', function () { walkWrap.classList.add('playing'); }, { once: true });
-    var tryWalk = function () { var p = walk.play(); if (p && p.catch) { p.catch(function () {}); } };
+    var tryWalk = function () { if (walkSlow || walk.getAttribute('data-done')) return; var p = walk.play(); if (p && p.catch) { p.catch(function () {}); } };
     if (io) {
       new IntersectionObserver(function (entries) {
         entries.forEach(function (e) { if (e.isIntersecting) { if (!walk.getAttribute('data-loaded')) { walk.setAttribute('data-loaded', '1'); walk.load(); } tryWalk(); } else { walk.pause(); } });
@@ -77,7 +82,7 @@
      screen and not under reduced motion, pauses on a tap, steps with the arrows, and never fetches a topic's frames
      until it is chosen. */
   var G = { data: null, topic: null, i: 0, timer: 0, playing: false, visible: false };
-  var STEP_MS = 2800;
+  var STEP_MS = 9000; // (review: 2.8 s was 430 words a minute) nine seconds a step, and only once Play is pressed
   var gphone = $('#g-phone');
   if (gphone) {
     var gimg = $('#g-img'), gring = $('#g-ring'), gstep = $('#g-step'), gcap = $('#g-cap'), gintro = $('#g-intro'), glist = $('#g-list'), gchips = $('#g-chips'), gplay = $('#g-play');
@@ -112,7 +117,7 @@
       glist.innerHTML = '';
       t.steps.forEach(function (st, i) { var li = document.createElement('li'); li.textContent = st.caption; li.addEventListener('click', function () { stop(); show(i); }); glist.appendChild(li); });
       show(0);
-      if (!reduced && auto !== false) play(); else stop();
+      stop(); // (review) the guide waits for Play; it never moves on by itself
     };
     var load = function () {
       return fetch('guide/guide.json?v=40').then(function (r) { if (!r.ok) throw new Error('guide ' + r.status); return r.json(); });
@@ -206,7 +211,15 @@
   /* Meet the Family: the chip bar marks the part you are reading. */
   var famLinks = $$('.famnav a');
   if (famLinks.length && io) {
-    var markFam = function (id) { famLinks.forEach(function (a) { a.setAttribute('aria-current', a.getAttribute('href') === '#' + id ? 'true' : 'false'); }); };
+    var famBar = $('.famnav .wrap');
+    var markFam = function (id) {
+      famLinks.forEach(function (a) {
+        var on = a.getAttribute('href') === '#' + id;
+        a.setAttribute('aria-current', on ? 'true' : 'false');
+        /* (review) the chip being read scrolls into the bar's view on a phone, never "3 Ou..." */
+        if (on && famBar && famBar.scrollWidth > famBar.clientWidth) famBar.scrollTo({ left: Math.max(0, a.offsetLeft - famBar.offsetLeft - 16), behavior: reduced ? 'auto' : 'smooth' });
+      });
+    };
     var fo = new IntersectionObserver(function (entries) { entries.forEach(function (e) { if (e.isIntersecting) markFam(e.target.id); }); }, { rootMargin: '-45% 0px -50% 0px' });
     $$('.fam-sec').forEach(function (sec) { fo.observe(sec); });
   }
@@ -237,10 +250,35 @@
       var lines = ['Name: ' + val('name'), 'Email: ' + val('email'), (kind === 'Ambassador' ? 'I am: ' : 'Field: ') + val('field')];
       if (val('link')) lines.push('LinkedIn or website: ' + val('link'));
       lines.push('', val('msg'));
-      window.location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(kind + ' application: ' + val('name')) + '&body=' + encodeURIComponent(lines.join('\n'));
+      var subject = kind + ' application: ' + val('name');
+      window.location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+      /* (review) with no email app set up nothing visible happens, so the answers are shown to copy, with the address */
+      var done = f.querySelector('.applydone');
+      if (!done) { done = document.createElement('div'); done.className = 'applydone'; done.setAttribute('role', 'status'); f.appendChild(done); }
+      while (done.firstChild) done.removeChild(done.firstChild);
+      var p1 = document.createElement('p'); p1.textContent = 'Your email app should open with this filled in. If nothing opened, copy it into an email to ' + TO + ' with the subject "' + subject + '".';
+      var pre = document.createElement('textarea'); pre.readOnly = true; pre.rows = 6; pre.value = lines.join('\n'); pre.setAttribute('aria-label', 'Your answers, to copy');
+      var copy = document.createElement('button'); copy.type = 'button'; copy.className = 'btn-ghost'; copy.textContent = 'Copy my answers';
+      copy.addEventListener('click', function () {
+        pre.select();
+        if (navigator.clipboard) { navigator.clipboard.writeText(pre.value).then(function () { copy.textContent = 'Copied'; }, function () {}); }
+        else { try { if (document.execCommand('copy')) copy.textContent = 'Copied'; } catch (e) {} }
+      });
+      done.append(p1, pre, copy);
     });
     $$('input, select, textarea', f).forEach(function (el) { el.addEventListener('input', function () { clearMiss(el); }); el.addEventListener('change', function () { clearMiss(el); }); });
   });
+
+  /* Store buttons in the visitor's own order (review, 22 November 2026): an iPhone or iPad sees TestFlight first; nothing
+     is sent anywhere, only the order changes. */
+  var ua = navigator.userAgent || '';
+  var isApple = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  if (isApple) {
+    $$('.stores').forEach(function (row) { var tf = row.querySelector('a[href*="testflight"]'); if (tf) row.insertBefore(tf, row.firstChild); });
+    var ways = $('.ways');
+    var iw = ways && $$('.way', ways).filter(function (w) { return w.querySelector('a[href*="testflight"]'); })[0];
+    if (iw) ways.insertBefore(iw, ways.firstChild);
+  }
 
   /* The year in the footer. */
   $$('[data-year]').forEach(function (y) { y.textContent = String(new Date().getFullYear()); });

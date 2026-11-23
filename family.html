@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="css/site.css?v=19">
+  <link rel="stylesheet" href="css/site.css?v=20">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -26,14 +26,14 @@
   <header class="top">
     <div class="wrap">
       <a class="lockup" href="index.html">
-        <img src="icons/icon-192.png" alt="" width="44" height="44">
+        <img src="icons/icon-96.png" alt="" width="44" height="44">
         <span><span class="pre">My Medical</span><span class="name">Daybook</span><span class="sr-only">, home</span></span>
       </a>
       <nav aria-label="Site">
         <a class="navlink" href="index.html#does">What it does</a>
         <a class="navlink" href="index.html#guide">See it work</a>
         <a class="navlink" href="index.html#reports">The reports</a>
-        <a class="navlink" href="index.html#try">Try it</a>
+        <a class="navlink keep" href="index.html#try">Try it</a>
         <a class="navlink family" href="family.html" aria-current="page"><span class="long">Meet the Family</span><span class="short">Family</span></a>
         <a class="btn" href="index.html#get">Get the app</a>
       </nav>
@@ -41,15 +41,10 @@
   </header>
   <main id="main">
     <section class="fam-hero wrap" aria-labelledby="h-fam">
-      <div class="fam-tree reveal" aria-hidden="true">
-        <svg viewBox="0 0 120 100" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
-          <path d="M60 96V52M60 70l-20-16M60 62l20-16M60 52l-12-18M60 52l12-18"/>
-          <circle class="leaf" cx="36" cy="50" r="11" fill="#DDEEEF"/>
-          <circle class="leaf" cx="84" cy="42" r="11" fill="#F6E7DD"/>
-          <circle class="leaf" cx="46" cy="28" r="10" fill="#E1F1E9"/>
-          <circle class="leaf" cx="74" cy="26" r="10" fill="#DDEEEF"/>
-          <circle class="leaf" cx="60" cy="14" r="9" fill="#F6E7DD"/>
-        </svg>
+      <div class="fam-photos reveal" aria-hidden="true">
+        <picture><source type="image/webp" srcset="media/team/us-then.webp"><img src="media/team/us-then.jpg" alt="" width="560" height="700"></picture>
+        <picture><source type="image/webp" srcset="media/team/us-now.webp"><img src="media/team/us-now.jpg" alt="" width="560" height="700"></picture>
+        <picture><source type="image/webp" srcset="media/team/us-max.webp"><img src="media/team/us-max.jpg" alt="" width="560" height="700"></picture>
       </div>
       <p class="kicker reveal">Meet the Family</p>
       <h1 id="h-fam" class="reveal d1">Two of us at a kitchen table. <em>A family growing round it.</em></h1>
@@ -88,8 +83,10 @@
           <h3>Mark Brown</h3>
           <p class="role">Founder and director</p>
           <p>Mark served 24 years in the British Army with the Royal Electrical and Mechanical Engineers, from 1999 to 2023, leaving as a Warrant Officer Class 1. He spent his last twelve years designing, delivering and running training: lead training delivery instructor, senior training analyst, senior operations manager, and finally senior training manager. In that last role he was accountable for five learning programmes and led a team of training analysts and evaluation officers.</p>
+          <details class="more-bio"><summary>Read more about Mark</summary>
           <p>Since leaving the Army he has led learning and development in industry, and now heads national training for a UK company. He is a Chartered Manager and a Fellow of the Chartered Management Institute, and holds the CIPD Level 5 Diploma in Learning and Development and a degree in electronic systems engineering.</p>
-          <p>Daybook began as his own way of keeping track between appointments. <a href="index.html#why">Read the story</a></p>
+          </details>
+          <p>Twenty years of designing training taught him to make complicated things simple for people under pressure, and Daybook is built the same way. It began as his own way of keeping track between appointments. <a href="index.html#why">Read the story</a></p>
         </div>
       </article>
       <article class="person">
@@ -98,7 +95,9 @@
           <h3>Shelley Brown, Assoc CIPD</h3>
           <p class="role">Director</p>
           <p>Shelley has spent twenty years in learning, talent and resourcing, much of it in global roles. At Hewlett Packard Enterprise she ran talent and learning programmes across Europe, the Americas and Asia Pacific, and led the roll-out across Europe, the Middle East and Africa of its award-winning Management Excellence Programme.</p>
+          <details class="more-bio"><summary>Read more about Shelley</summary>
           <p>She went on to manage product development projects at BCS, The Chartered Institute for IT, then led apprenticeship, learning delivery and training teams in industry, including training across EMEA for a global software company. She is an Associate Member of the CIPD and an experienced project manager in heavily regulated industries.</p>
+          </details>
           <p>At Daybook she is the sounding board and the dedicated grown-up: she tests every change and keeps the plans honest.</p>
         </div>
       </article>
@@ -113,7 +112,7 @@
           <h2 id="h-adv">The people who make us better.</h2>
           <p class="lead">A small board of people who know their field, giving their time and their honesty so Daybook works for patients, carers and the teams who look after them.</p>
         </div>
-        <div class="seats">
+        <div class="seats one">
           <article class="seat reveal">
             <span class="mono" aria-hidden="true">KS</span>
             <h3>Kate Steventon</h3>
@@ -122,16 +121,11 @@
             <p>For six years she advised South Warwickshire NHS Foundation Trust's Maternity Voices Partnership, bringing the view of the people using the service. At Daybook she advises on the brand, the launch and how we reach the people it could help.</p>
             <a class="more" href="https://www.linkedin.com/in/katysteventon/" rel="noopener">Kate on LinkedIn</a>
           </article>
-          <a class="seat open reveal d1" href="#apply-advisor">
-            <span class="mono"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
-            <h3>This seat is waiting</h3>
-            <p>Clinicians, people with lived experience, and specialists in data, accessibility and charities. Could it be you?</p>
-            <span class="more">Apply to join the board</span>
-          </a>
         </div>
         <div class="apply reveal" id="apply-advisor">
           <div class="why">
             <h3>Join the board</h3>
+            <p class="joinline">We are looking for a few more advisors. Could it be you?</p>
             <p>We are looking for a few more advisors who will tell us the truth, share what they know and help Daybook grow the right way. It is a few conversations a year, at times that suit you. We will talk it all through before anything is agreed.</p>
             <ul><li>A doctor, nurse or therapist</li><li>Someone living with a long-term condition, or caring for someone who is</li><li>Data protection, accessibility, charities, business</li></ul>
           </div>
@@ -155,14 +149,8 @@
           <h2 id="h-amb">The people who tell the next person.</h2>
           <p class="lead">Daybook spreads the way it started: one person showing another. Our ambassadors are patients, carers, nurses, therapists and support group leaders who believe in it and help it reach the people who need it, in a clinic, a group, online or over a cup of tea.</p>
         </div>
-        <div class="seats">
-          <a class="seat open reveal" href="#apply-ambassador">
-            <span class="mono"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
-            <h3>Our first ambassadors are joining now</h3>
-            <p>Their names and their own words will be here. Could one of them be yours?</p>
-            <span class="more">Become an ambassador</span>
-          </a>
-          <div class="seat reveal d1">
+        <div class="seats one">
+          <div class="seat reveal">
             <h3>What an ambassador does</h3>
             <p>Tells people about Daybook in their own way: a word in a support group, a leaflet in a clinic, a post online. We give you what you need, and you tell us what people say, so we can make it better.</p>
           </div>
@@ -191,7 +179,7 @@
         <div class="sec-head reveal">
           <p class="kicker">Press and Media</p>
           <h2 id="h-press">Writing about Daybook?</h2>
-          <p class="lead">Mark and Shelley are happy to talk. Everything below is free to use with a story about Daybook.</p>
+          <p class="lead">Mark and Shelley are happy to talk. You may use everything below in a story about Daybook.</p>
         </div>
         <div class="press">
           <div class="card story-card reveal">
@@ -202,17 +190,17 @@
           </div>
           <div class="card reveal d1">
             <h3>Press contact</h3>
-            <p>Email <a href="mailto:support@mymedicaldaybook.co.uk?subject=Press%20enquiry">support@mymedicaldaybook.co.uk</a> with Press in the subject, and we will come back to you within a day.</p>
+            <p>Email <a href="mailto:support@mymedicaldaybook.co.uk?subject=Press%20enquiry">support@mymedicaldaybook.co.uk</a> with Press in the subject, and we will usually come back to you within a day.</p>
           </div>
           <div class="card reveal d2">
             <h3>Press kit</h3>
             <ul class="kit">
-              <li><a href="icons/icon-512.png" download><img src="icons/icon-192.png" alt="" width="44" height="44"><span>The app icon<small>PNG, 512 pixels</small></span></a></li>
-              <li><a href="media/opener-poster.jpg" download><img src="media/opener-poster.jpg" alt="" width="44" height="44" loading="lazy"><span>The opening screen<small>JPG, 1280 pixels wide</small></span></a></li>
-              <li><a href="media/team/us-now.jpg" download><img src="media/team/us-now.jpg" alt="" width="44" height="44" loading="lazy"><span>Mark and Shelley today<small>JPG</small></span></a></li>
-              <li><a href="media/team/mark.jpg" download><img src="media/team/mark.jpg" alt="" width="44" height="44" loading="lazy"><span>Mark Brown<small>JPG</small></span></a></li>
-              <li><a href="media/team/shelley.jpg" download><img src="media/team/shelley.jpg" alt="" width="44" height="44" loading="lazy"><span>Shelley Brown<small>JPG</small></span></a></li>
-              <li><a href="media/report-notes-1.jpg" download><img src="media/report-notes-1.jpg" alt="" width="44" height="44" loading="lazy"><span>A report page, with made-up data<small>JPG, 1000 pixels wide</small></span></a></li>
+              <li><a href="icons/icon-512.png" download><img src="icons/icon-96.png" alt="" width="44" height="44"><span>The app icon<small>PNG, 512 pixels</small></span></a></li>
+              <li><a href="media/opener-poster.jpg" download><img src="media/thumb-opener-poster.webp" alt="" width="44" height="44" loading="lazy"><span>The opening screen<small>JPG, 1280 pixels wide</small></span></a></li>
+              <li><a href="media/team/us-now.jpg" download><img src="media/team/thumb-us-now.webp" alt="" width="44" height="44" loading="lazy"><span>Mark and Shelley today<small>JPG</small></span></a></li>
+              <li><a href="media/team/mark.jpg" download><img src="media/team/thumb-mark.webp" alt="" width="44" height="44" loading="lazy"><span>Mark Brown<small>JPG</small></span></a></li>
+              <li><a href="media/team/shelley.jpg" download><img src="media/team/thumb-shelley.webp" alt="" width="44" height="44" loading="lazy"><span>Shelley Brown<small>JPG</small></span></a></li>
+              <li><a href="media/report-notes-1.jpg" download><img src="media/thumb-report-notes-1.webp" alt="" width="44" height="44" loading="lazy"><span>A report page, with made-up data<small>JPG, 1000 pixels wide</small></span></a></li>
             </ul>
           </div>
         </div>
@@ -221,23 +209,23 @@
 
     <section class="sec-break" aria-label="Get the app">
       <div class="wrap">
-        <div class="getband reveal" role="region" aria-labelledby="gb-f"><div class="gb-head"><img class="gb-icon" src="icons/icon-192.png" alt="" width="92" height="92"><div><p class="gb-kicker">Join the family</p><p class="gb-title" id="gb-f">Start your own Daybook.</p><p class="gb-line">On iPhone, Android or any browser. No code needed.</p></div></div><div class="stores"><a class="store" href="https://play.google.com/store/apps/details?id=uk.co.mark1apps.daybook" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9.5v7.5a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5V9.5z"/><path d="M5 9.5a7 7 0 0 1 14 0"/><path d="M8.5 5l-1.5-2.2M15.5 5l1.5-2.2"/><circle cx="9.5" cy="7.2" r=".7" fill="currentColor"/><circle cx="14.5" cy="7.2" r=".7" fill="currentColor"/><path d="M9 18.5v2.5M15 18.5v2.5"/></svg><small>Android · open Beta</small><b>Google Play</b></a><a class="store" href="https://testflight.apple.com/join/4gUcyMJW" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2" width="11" height="20" rx="2.8"/><path d="M10.5 4.6h3"/><path d="M10.8 19h2.4"/></svg><small>iPhone · Beta on</small><b>TestFlight</b></a><a class="store web" href="https://app.mymedicaldaybook.co.uk/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><small>Any device</small><b>In your browser</b></a></div></div>
+        <div class="getband reveal" role="region" aria-labelledby="gb-f"><div class="gb-head"><img class="gb-icon" src="icons/icon-264.webp" alt="" width="92" height="92"><div><p class="gb-kicker">Join the family</p><h2 class="gb-title" id="gb-f">Start your own Daybook.</h2><p class="gb-line">On iPhone, Android or any browser. No code needed.</p></div></div><div class="stores"><a class="store" href="https://play.google.com/store/apps/details?id=uk.co.mark1apps.daybook" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9.5v7.5a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5V9.5z"/><path d="M5 9.5a7 7 0 0 1 14 0"/><path d="M8.5 5l-1.5-2.2M15.5 5l1.5-2.2"/><circle cx="9.5" cy="7.2" r=".7" fill="currentColor"/><circle cx="14.5" cy="7.2" r=".7" fill="currentColor"/><path d="M9 18.5v2.5M15 18.5v2.5"/></svg><small>Android · open Beta</small><b>Google Play</b></a><a class="store" href="https://testflight.apple.com/join/4gUcyMJW" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2" width="11" height="20" rx="2.8"/><path d="M10.5 4.6h3"/><path d="M10.8 19h2.4"/></svg><small>iPhone · Beta on</small><b>TestFlight</b></a><a class="store web" href="https://app.mymedicaldaybook.co.uk/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><small>Any device</small><b>In your browser</b></a></div><p class="gb-note"><a href="index.html#try">Or try a demo first, no account needed</a></p></div>
       </div>
     </section>
   </main>
   <footer>
     <div class="wrap">
       <a class="lockup" href="index.html">
-        <img src="icons/icon-192.png" alt="" width="44" height="44">
+        <img src="icons/icon-96.png" alt="" width="44" height="44">
         <span><span class="pre">My Medical</span><span class="name">Daybook</span><span class="sr-only">, home</span></span>
       </a>
       <nav aria-label="Legal and support"><a href="privacy.html">Privacy</a><a href="terms.html">Terms of use</a><a href="support.html">Support</a><a href="family.html">Meet the Family</a><a href="index.html#get">Get the app</a></nav>
-      <span class="co"><img src="icons/mark1apps-line.png" alt="" width="32" height="28">Made by Mark 1 Apps Ltd</span>
+      <span class="co"><img src="icons/mark1apps-line-64.png" alt="" width="32" height="28" loading="lazy">Made by Mark 1 Apps Ltd</span>
       <p>Copyright <span data-year>2026</span> Mark 1 Apps Ltd. All rights reserved. Mark 1 Apps Ltd is a company registered in England and Wales, number 17510025. Registered office: 71-75 Shelton Street, London WC2H 9JQ.</p>
       <p>Registered with the Information Commissioner's Office, number ZC275185. Contact: <a href="mailto:support@mymedicaldaybook.co.uk">support@mymedicaldaybook.co.uk</a>.</p>
       <p>Daybook is not a medical device and gives no medical advice. In an emergency call 999; for urgent advice call 111.</p>
     </div>
   </footer>
-  <script src="js/site.js?v=43" defer></script>
+  <script src="js/site.js?v=44" defer></script>
 </body>
 </html>
