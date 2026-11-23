@@ -596,3 +596,13 @@ html:has(.famnav) { scroll-padding-top: 160px; }
   .guide .gctl .arrow { width: 44px; height: 44px; min-height: 44px; font-size: 22px; }
   .gphone { width: min(330px, calc(100vw - 2 * var(--gutter) - 104px), max(230px, calc((100svh - 240px) * 390 / 844))); }
 }
+
+/* The iPhone Duo opened out (about 900 to 950px) with larger text: the full menu wrapped word by word and pushed the page
+   past the screen (Mark's screenshots, 23 November 2026). The full menu now shows from 1180px; between 861 and 1179px the
+   header keeps Try it, Meet the Family and Get the app, and no header link ever wraps. */
+.top nav a { white-space: nowrap; }
+@media (max-width: 1179px) { .top nav a.navlink:not(.keep):not(.family) { display: none; } }
+@media (min-width: 861px) and (max-width: 1179px) { .top nav a.navlink.family { display: inline-flex; } }
+.top .wrap { flex-wrap: wrap; row-gap: 0; min-width: 0; }
+.top nav { flex-wrap: wrap; justify-content: flex-end; min-width: 0; }
+@media (min-width: 861px) and (max-width: 1179px) { .top nav .family .long { display: none; } .top nav .family .short { display: inline; } }
