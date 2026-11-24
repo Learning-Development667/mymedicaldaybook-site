@@ -120,7 +120,7 @@
       stop(); // (review) the guide waits for Play; it never moves on by itself
     };
     var load = function () {
-      return fetch('guide/guide.json?v=40').then(function (r) { if (!r.ok) throw new Error('guide ' + r.status); return r.json(); });
+      return fetch('guide/guide.json?v=41').then(function (r) { if (!r.ok) throw new Error('guide ' + r.status); return r.json(); });
     };
     load().then(function (d) {
       G.data = d;
